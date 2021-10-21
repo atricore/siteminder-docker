@@ -1,0 +1,9 @@
+# Default schema
+source "x500.dxc";
+source "cosine.dxc";
+source "umich.dxc";
+source "inetop.dxc";
+source "dxserver.dxc";
+#CA Schema
+source "netegrity.dxc";
+source "etrust.dxc";

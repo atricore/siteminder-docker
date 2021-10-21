@@ -1,0 +1,57 @@
+---
+  - name: Setup CA Directory
+    hosts: dx
+    tasks:
+      - name: Execute CA Directory post installation script
+        shell: nohup /tmp/cadir_temp/dockertools/setup_psdsa.sh </dev/null >/dev/null 2>&1 &
+  - name: Run Siteminder Policy Server
+    hosts: ps
+    tasks:
+      - name: Execute the PS start command
+        shell: nohup /opt/CA/siteminder/start-all </dev/null >/dev/null 2>&1 &
+  - name: Configure Siteminder Policy Server
+    hosts: ps
+    tasks:
+      - name: Execute PS post-install  command
+        register: out
+        command: "/tmp/sm_temp/dockertools/setup_ps.sh"
+      - debug:
+          var: out.stdout_lines
+  - name: Setup Siteminder AG
+    hosts: ag
+    tasks:
+      - name: Execute AG configuration command
+        register: out
+        command: "/tmp/sp_temp/dockertools/setup_ag.sh"
+      - debug:
+          var: out.stdout_lines
+  - name: Post installation of AG
+    hosts: ps
+    tasks:
+      - name: Execute AG post install command
+        register: out
+        shell: "source /opt/CA/siteminder/ca_ps_env.ksh && perl /tmp/sm_temp/dockertools/ProxyUIPostInstall.pl"
+      - debug:
+          var: out.stdout_lines
+  - name: Run Siteminder AdminUI
+    hosts: ps
+    tasks:
+      - name: Launch SM AdminUI
+        shell: nohup /opt/CA/siteminder/adminui/bin/standalone.sh </dev/null >/dev/null 2>&1 &
+  - name: Stop SPS UI
+    hosts: ag
+    tasks:
+      - name: Kill SPS UI
+        register: out
+        shell: sleep 40 && /opt/CA/secure-proxy/default/proxy-engine/sps-ctl stop
+        ignore_errors: True
+      - debug:
+          var: out.stdout_lines
+  - name: Start SPS UI
+    hosts: ag
+    tasks:
+      - name: Launch SPS UI
+        register: out
+        shell: /opt/CA/secure-proxy/default/proxy-engine/sps-ctl start
+      - debug:
+          var: out.stdout_lines

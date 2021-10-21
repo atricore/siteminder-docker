@@ -1,0 +1,4 @@
+select_editor:
+  user_homes:
+    - "/root"
+  editor: "vim"

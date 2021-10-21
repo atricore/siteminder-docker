@@ -1,0 +1,37 @@
+version: 1
+
+dn: ou=Contoso,o=psdsa,c=US
+objectClass: organizationalUnit
+objectClass: top
+ou: Contoso
+
+dn: cn=admin,ou=Contoso,o=psdsa,c=US
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: admin
+sn: admin
+userPassword:: e1NIQTUxMn12U3NhcjM3MDhKdnA5U3ppMk5XWlowMkJxcDFxUkNGcGJjVFpQZ
+ EJobldnczVXdE5aS252Q1hkaHp0bWVEMmNtVzE5MkNGNWJEdWZLUnBheXJXL2lzZz09
+
+dn: ou=Netegrity,o=psdsa,c=US
+objectClass: organizationalUnit
+objectClass: top
+ou: Netegrity
+
+dn: ou=SiteMinder,ou=Netegrity,o=psdsa,c=US
+objectClass: organizationalUnit
+objectClass: top
+ou: SiteMinder
+
+dn: ou=PolicySvr4,ou=SiteMinder,ou=Netegrity,o=psdsa,c=US
+objectClass: organizationalUnit
+objectClass: top
+ou: PolicySvr4
+
+dn: ou=XPS,ou=PolicySvr4,ou=SiteMinder,ou=Netegrity,o=psdsa,c=US
+objectClass: organizationalUnit
+objectClass: top
+ou: XPS
+

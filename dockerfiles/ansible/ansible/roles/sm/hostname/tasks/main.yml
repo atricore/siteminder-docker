@@ -1,0 +1,4 @@
+---
+- name: "Set hostname to {{ hostname.fqdn }}"
+  hostname:
+    name: "{{ hostname.fqdn }}"

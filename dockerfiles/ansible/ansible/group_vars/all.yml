@@ -1,0 +1,40 @@
+ansible_ssh_extra_args: "-o 'PasswordAuthentication no' -o 'IdentitiesOnly yes'"
+etc_environment:
+  lines:
+    "LANG": "en_US.utf-8"
+    "LC_ALL": "en_US.utf-8"
+hostname:
+  fqdn: "{{ inventory_hostname }}"
+ntp:
+  timezone: Europe/Bratislava
+  area: europe
+  manage_config: true
+packages:
+  present:
+    - curl
+    - unzip
+    - tar
+    - tcpdump
+    - nmap
+    - dnsutils
+    - lsof
+    - vim
+    - screen
+    - wget
+    - tree
+    - lshw
+    - mtr
+    - strace
+    - bash-completion
+    - jq
+    - htop
+    - bzip2
+screen:
+  user_homes:
+    - "/root"
+select_editor:
+  user_homes:
+    - "/root"
+sshd_config:
+  lines:
+    "PasswordAuthentication": "no"

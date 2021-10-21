@@ -1,0 +1,12 @@
+---
+- name: Install Screen
+  package:
+    name: screen
+    state: present
+  become: true
+
+- name: Setup .screen file for users
+  copy:
+    src: .screenrc
+    dest: "{{ item }}/.screenrc"
+  with_items: "{{ screen.user_homes }}"

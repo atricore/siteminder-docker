@@ -1,0 +1,6 @@
+- name: Set key-value to /etc/environment
+  lineinfile:
+    path: /etc/environment
+    regexp: "^#? *{{ item.key | regex_escape() }}="
+    line: "{{ item.key }}={{ item.value }}"
+  with_dict: "{{ etc_environment.lines }}"

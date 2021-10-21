@@ -1,0 +1,343 @@
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion=1073653934
+InstallKey=           	{RC2}mW+1yc2SP9Vpxsu9awN0E+jAf9rvaFwC3LtGLuil5IE=;	REG_SZ
+Label=                	                 2546;	REG_SZ
+Language=             	                   EN;	REG_SZ
+Location=             	   /opt/CA/siteminder;	REG_SZ
+MasterKeyFile=        	/opt/CA/siteminder/bin/EncryptionKey.txt;	REG_SZ
+Update=               	                05.00;	REG_SZ
+Version=              	                 12.8;	REG_SZ
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\Bootstrap=983192244
+PolicyServerRole=     	                  0x0;	REG_DWORD
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\Crypto=1058987963
+CryptoProvider=       	                  0x0;	REG_DWORD
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\Database=532731870
+ConnectionHangwaitTime=	                 0x46;	REG_DWORD
+ConnectionTimeout=    	                 0x41;	REG_DWORD
+LoginTimeout=         	                  0xf;	REG_DWORD
+OdbcBrandingLib=      	         sminstallapi;	REG_SZ
+QueryTimeout=         	                 0x1e;	REG_DWORD
+UpdateSyncDelay=      	                  0x0;	REG_DWORD
+Version=              	                  5.0;	REG_SZ
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\Database\AdvancedAuth=109796040
+ConnectionIdleTimeout=	                0xe10;	REG_DWORD
+Data Source=          	SiteMinder Adv Auth Data Source;	REG_SZ
+Enabled=              	                  0x1;	REG_DWORD
+MaxConnections=       	                 0x19;	REG_DWORD
+Password=             	                     ;	REG_SZ
+ProviderNamespace=    	                ODBC:;	REG_SZ
+Use Default=          	                  0x1;	REG_DWORD
+User Name=            	                     ;	REG_SZ
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\Database\Default=609761652
+Data Source=          	SiteMinder Data Source;	REG_SZ
+Enabled=              	                  0x0;	REG_DWORD
+MaxConnections=       	                 0x19;	REG_DWORD
+Password=             	                     ;	REG_SZ
+ProviderNamespace=    	                LDAP:;	REG_SZ
+User Name=            	                     ;	REG_SZ
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\Database\Key=968670248
+Data Source=          	SiteMinder Keys Data Source;	REG_SZ
+Enabled=              	                  0x0;	REG_DWORD
+MaxConnections=       	                  0x5;	REG_DWORD
+Password=             	                     ;	REG_SZ
+ProviderNamespace=    	                LDAP:;	REG_SZ
+Use Default=          	                  0x1;	REG_DWORD
+User Name=            	                     ;	REG_SZ
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\Database\Log=684242006
+Data Source=          	SiteMinder Logs Data Source;	REG_SZ
+MaxConnections=       	                  0xf;	REG_DWORD
+Password=             	                     ;	REG_SZ
+ProviderNamespace=    	                TEXT:;	REG_SZ
+Use Default=          	                  0x0;	REG_DWORD
+User Name=            	                     ;	REG_SZ
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\Database\SessionServer=836090236
+Data Source=          	SiteMinder Session Data Source;	REG_SZ
+Enabled=              	                  0x0;	REG_DWORD
+MaxConnections=       	                 0x10;	REG_DWORD
+Password=             	                     ;	REG_SZ
+ProviderNamespace=    	                LDAP:;	REG_SZ
+Use Default=          	                  0x0;	REG_DWORD
+User Name=            	                     ;	REG_SZ
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\Database\Token=487356454
+Data Source=          	SiteMinder Tokens Data Source;	REG_SZ
+MaxConnections=       	                  0xa;	REG_DWORD
+Password=             	                     ;	REG_SZ
+ProviderNamespace=    	                ODBC:;	REG_SZ
+Use Default=          	                  0x0;	REG_DWORD
+User Name=            	                     ;	REG_SZ
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\Debug=1062618125
+Console=              	                  0x0;	REG_DWORD
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\Ds=629135842
+Namespaces=           	  LDAP:,ODBC:,Custom:;	REG_SZ
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\Ds\ClassFilters=521745427
+LDAP:=                	organization,organizationalUnit,groupOfNames,groupOfUniqueNames,group;	REG_SZ
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\Ds\DsCacheParms=489591072
+DsInfoEnabled=        	                  0x1;	REG_DWORD
+DsInfoMaxSizeMB=      	                  0xa;	REG_DWORD
+DsInfoTimeoutSeconds= 	                0xe10;	REG_DWORD
+UserPolicyCacheMaxSize=	                0x3e8;	REG_DWORD
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\Ds\GroupClassFilters=182309570
+LDAP:=                	groupOfNames,groupOfUniqueNames,group;	REG_SZ
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\Ds\LdapMatchUserDN=866630411
+group=                	               member;	REG_SZ
+groupOfNames=         	               member;	REG_SZ
+groupOfUniqueNames=   	         uniqueMember;	REG_SZ
+organizationalRole=   	         roleOccupant;	REG_SZ
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\Ds\LDAPProvider=881368249
+EnableADEnhancedReferrals=	                  0x1;	REG_DWORD
+EnableEnhancedReferrals=	                  0x1;	REG_DWORD
+EnableObjectCategory= 	                  0x0;	REG_DWORD
+EnablePagingADNameSpace=	                  0x0;	REG_DWORD
+EnableReferrals=      	                  0x1;	REG_DWORD
+MaxReferralHops=      	                  0xa;	REG_DWORD
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\Ds\NamespaceProviders=484123837
+Custom:=              	           smdscustom;	REG_SZ
+LDAP:=                	             smdsldap;	REG_SZ
+ODBC:=                	             smdsodbc;	REG_SZ
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\Ds\OrgClassFilters=482008080
+LDAP:=                	organization,organizationalUnit;	REG_SZ
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\Ds\OrgResolution=624849018
+Group=                	                  0x0;	REG_DWORD
+Role=                 	                  0x0;	REG_DWORD
+User=                 	                  0x1;	REG_DWORD
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\Ds\PolicyClassFilters=445389618
+LDAP:=                	organizationalPerson,inetOrgPerson,organization,organizationalUnit,groupOfNames,groupOfUniqueNames,group;	REG_SZ
+ODBC:=                	          Group, User;	REG_SZ
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\Ds\PolicyResolution=110393337
+container=            	                  0x5;	REG_DWORD
+DN Attribute=         	                  0xa;	REG_DWORD
+Group=                	                  0x2;	REG_DWORD
+Group Attribute=      	                  0x8;	REG_DWORD
+groupOfNames=         	                  0x2;	REG_DWORD
+groupOfUniqueNames=   	                  0x2;	REG_DWORD
+inetOrgPerson=        	                  0x1;	REG_DWORD
+Org Attribute=        	                  0x9;	REG_DWORD
+organization=         	                  0x5;	REG_DWORD
+organizationalPerson= 	                  0x1;	REG_DWORD
+organizationalRole=   	                  0x4;	REG_DWORD
+organizationalUnit=   	                  0x5;	REG_DWORD
+person=               	                  0x1;	REG_DWORD
+Query=                	                  0x6;	REG_DWORD
+residentialPerson=    	                  0x1;	REG_DWORD
+User=                 	                  0x1;	REG_DWORD
+User Attribute=       	                  0x3;	REG_DWORD
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\Ds\RoleClassFilters=386887140
+LDAP:=                	   organizationalRole;	REG_SZ
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\Ds\UserClassFilters=653048430
+LDAP:=                	inetOrgPerson,organizationalPerson,person;	REG_SZ
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\Ems=743258054
+SessionTimeout=       	                 0x1e;	REG_DWORD
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\EventProvider=989276530
+Provider=             	/opt/CA/siteminder/lib/libXPSAudit.so;	REG_SZ
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\LdapKeyStore=1004758314
+AdminDN=              	                     ;	REG_SZ
+AdminPW=              	                     ;	REG_SZ
+Enabled=              	                  0x1;	REG_DWORD
+PSRootDN=             	                     ;	REG_SZ
+Server=               	                     ;	REG_SZ
+Use Default=          	                  0x1;	REG_DWORD
+Use SSL=              	                  0x0;	REG_DWORD
+Version=              	                  5.0;	REG_SZ
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\LdapPolicyStore=30306961
+AdminDN=              	cn=admin,ou=Contoso,o=psdsa,C=US;	REG_SZ
+AdminPW=              	{RC2}1cmLoj/7vU2oo31NGQozuQ==;	REG_SZ
+AppSdk=               	                  0x0;	REG_DWORD
+CertDbPath=           	                     ;	REG_SZ
+Enabled=              	                  0x1;	REG_DWORD
+PSRootDN=             	         o=psdsa,c=US;	REG_SZ
+Server=               	              dx:7777;	REG_SZ
+Use SSL=              	                  0x0;	REG_DWORD
+Version=              	                  5.0;	REG_SZ
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\LdapSessionServer=481761599
+AdminDN=              	                     ;	REG_SZ
+AdminPW=              	                     ;	REG_SZ
+Enabled=              	                  0x0;	REG_DWORD
+MaxConnections=       	                  0xa;	REG_DWORD
+Server=               	                     ;	REG_SZ
+SSRootDN=             	                     ;	REG_SZ
+Use Default=          	                  0x0;	REG_DWORD
+Use SSL=              	                  0x0;	REG_DWORD
+Version=              	                  5.0;	REG_SZ
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\LogConfig=289013780
+BufferedTracing=      	                  0x0;	REG_DWORD
+FilesToKeep=          	                  0xa;	REG_DWORD
+InMemoryTraceConfig=  	/opt/CA/siteminder/config/sminmemorytracedefault.txt;	REG_SZ
+InMemoryTraceFilePath=	/opt/CA/siteminder/log/;	REG_SZ
+InMemoryTraceSize=    	                 0x64;	REG_DWORD
+LastRolloverTime=     	                  0x0;	REG_DWORD
+LogFile=              	/opt/CA/siteminder/log/smps.log;	REG_SZ
+LogLocalTime=         	                  0x1;	REG_DWORD
+RolloverDays=         	                  0x0;	REG_DWORD
+RolloverInterval=     	                  0x0;	REG_DWORD
+RolloverOnStart=      	                  0x1;	REG_DWORD
+RolloverSize=         	                  0xa;	REG_DWORD
+RolloverTime=         	                     ;	REG_SZ
+SizeOfRingBuffer=     	                  0xa;	REG_DWORD
+TraceConfig=          	                     ;	REG_SZ
+TraceConfig1=         	/opt/CA/siteminder/config/smtracedefault.txt;	REG_SZ
+TraceConfig2=         	                     ;	REG_SZ
+TraceConfig3=         	                     ;	REG_SZ
+TraceConfig4=         	                     ;	REG_SZ
+TraceConsole=         	                  0x0;	REG_DWORD
+TraceDelim=           	                     ;	REG_SZ
+TraceFilesToKeep=     	                  0xa;	REG_DWORD
+TraceFormat=          	                   sm;	REG_SZ
+TraceInMemory=        	                  0x0;	REG_DWORD
+TraceLastRolloverTime=	                  0x0;	REG_DWORD
+TraceMode=            	                  0x0;	REG_DWORD
+TraceOutput=          	/opt/CA/siteminder/log/smtracedefault.log;	REG_SZ
+TraceRolloverDays=    	                  0x0;	REG_DWORD
+TraceRolloverInterval=	                  0x0;	REG_DWORD
+TraceRolloverOnStart= 	                  0x1;	REG_DWORD
+TraceRolloverSize=    	                  0xa;	REG_DWORD
+TraceRolloverTime=    	                     ;	REG_SZ
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\Monitor=283745675
+Tcp Port=             	               0xada1;	REG_DWORD
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\ObjectStore=298436379
+AgentCmdStabilizationDuration=	                  0xa;	REG_DWORD
+CacheEnabled=         	                  0x1;	REG_DWORD
+CacheLoadStartup=     	                  0x1;	REG_DWORD
+CacheSessionKey=      	                  0x0;	REG_DWORD
+DoNotAllowInvalidPolicyObjects=	                  0x0;	REG_DWORD
+EnableKeyGeneration=  	                  0x1;	REG_DWORD
+EnableKeyUpdate=      	                  0x0;	REG_DWORD
+JournalDelete=        	                 0x3c;	REG_DWORD
+JournalRefresh=       	                 0x3c;	REG_DWORD
+KeyStoreEncryptionKey=	                     ;	REG_SZ
+KeyStoreProviderNamespace=	                LDAP:;	REG_SZ
+MaxObjects=           	                 0x64;	REG_DWORD
+MaxTimeDeltaBetweenServers=	                 0x1e;	REG_DWORD
+ProviderNamespace=    	                LDAP:;	REG_SZ
+ServerCmdDelay=       	                  0xa;	REG_DWORD
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\ObjectStore\NamespaceProviders=191873404
+LDAP:=                	            smobjldap;	REG_SZ
+ODBC:=                	            smobjodbc;	REG_SZ
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\PolicyServer=491163205
+Acct Tcp Port=        	               0xad99;	REG_DWORD
+Acct Udp Port=        	                0x66e;	REG_DWORD
+Adm Tcp Port=         	               0xad9c;	REG_DWORD
+Adm Udp Port=         	               0xad9c;	REG_DWORD
+Admin Enabled=        	                  0x1;	REG_DWORD
+Admin UI Inactivity Timeout=	                  0x0;	REG_DWORD
+App Logfile=          	                     ;	REG_SZ
+App Logfile Append=   	                  0x0;	REG_DWORD
+Auth Tcp Port=        	               0xad9a;	REG_DWORD
+Auth Udp Port=        	                0x66d;	REG_DWORD
+Az Tcp Port=          	               0xad9b;	REG_DWORD
+Comm Log=             	                  0x0;	REG_DWORD
+Comm Logfile=         	                     ;	REG_SZ
+Comm Logfile Append=  	                  0x0;	REG_DWORD
+Console Log=          	                  0x0;	REG_DWORD
+Enable Null Value Response=	                  0x0;	REG_DWORD
+File Log=             	                  0x0;	REG_DWORD
+Log Requests=         	                  0x0;	REG_DWORD
+Log Responses=        	                  0x0;	REG_DWORD
+Log Status=           	                  0x0;	REG_DWORD
+Log Trace=            	                  0x0;	REG_DWORD
+Max Tunnel Buffer Size=	            0x7fffe10;	REG_DWORD
+MinimizeAuthQueries=  	                  0x1;	REG_DWORD
+Radius Enabled=       	                  0x0;	REG_DWORD
+Srv1=                 	                  0x0;	REG_DWORD
+Srv2=                 	                  0x0;	REG_DWORD
+Srv3=                 	                  0x0;	REG_DWORD
+Srv4=                 	                  0x0;	REG_DWORD
+SuspendTimeout=       	                0xe10;	REG_DWORD
+Tcp Idle Session Timeout=	                  0xa;	REG_DWORD
+Tcp Max Server Connections=	                0x100;	REG_DWORD
+Tcp Port Enabled=     	                  0x1;	REG_DWORD
+Thread Pool Size=     	                  0x8;	REG_DWORD
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\Publish=765551575
+PublishFile=          	/opt/CA/siteminder/log/smpublish.XML;	REG_SZ
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\Reports=618646605
+AffiliateFilter=      	                  0x0;	REG_DWORD
+AnonymousAuthFilter=  	                  0x0;	REG_DWORD
+AnonymousAzFilter=    	                  0x0;	REG_DWORD
+AuthFilter=           	                  0x0;	REG_DWORD
+AzFilter=             	                  0x0;	REG_DWORD
+FilesToKeep=          	                  0xa;	REG_DWORD
+LastRolloverTime=     	                  0x0;	REG_DWORD
+LogAccess=            	                  0x0;	REG_DWORD
+LogObj=               	                  0x0;	REG_DWORD
+RolloverDays=         	                  0x0;	REG_DWORD
+RolloverInterval=     	                  0x0;	REG_DWORD
+RolloverOnStart=      	                  0x1;	REG_DWORD
+RolloverSize=         	                  0xa;	REG_DWORD
+RolloverTime=         	                     ;	REG_SZ
+SyslogFacility=       	             LOG_AUTH;	REG_SZ
+SyslogPriority=       	             LOG_INFO;	REG_SZ
+SyslogTag=            	           Siteminder;	REG_SZ
+TxtLogFile=           	/opt/CA/siteminder/log/smaccess.log;	REG_SZ
+UserAdminFilter=      	                  0x0;	REG_DWORD
+Worker Threads=       	                  0x5;	REG_DWORD
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\Reports\NamespaceProviders=991623421
+ODBC:=                	     smreportsodbclog;	REG_SZ
+SQLBulkInsertFlushInterval=	                 0x3c;	REG_DWORD
+SQLBulkInsertFlushRowCount=	                0x3e8;	REG_DWORD
+SYSLOG:=              	      smreportssyslog;	REG_SZ
+TEXT:=                	     smreportstextlog;	REG_SZ
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\SessionServer=997552310
+AATokenExpiryVarTimeout=	                  0xa;	REG_DWORD
+MaintenancePeriod=    	                 0x3c;	REG_DWORD
+MaintenanceQueryTimeout=	                 0x3c;	REG_DWORD
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\SessionServer\NamespaceProviders=548718387
+LDAP:=                	    smssprovider_ldap;	REG_SZ
+ODBC:=                	      smssprovider_db;	REG_SZ
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\Tokens\CryptoCard\SerialNumberUserAttribute=1061525861
+LanMan:=              	                     ;	REG_SZ
+LDAP:=                	                     ;	REG_SZ
+ODBC:=                	                     ;	REG_SZ
+WinNT:=               	                     ;	REG_SZ
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\Tokens\Encotone=928590303
+A_CT=                 	                     ;	REG_SZ
+A_DT=                 	                     ;	REG_SZ
+B_CT=                 	                     ;	REG_SZ
+B_DT=                 	                     ;	REG_SZ
+C_CT=                 	                     ;	REG_SZ
+C_DT=                 	                     ;	REG_SZ
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Netegrity\SiteMinder\CurrentVersion\Tokens\Encotone\SerialNumberUserAttribute=950332775
+LanMan:=              	                     ;	REG_SZ
+LDAP:=                	                     ;	REG_SZ
+ODBC:=                	                     ;	REG_SZ
+WinNT:=               	                     ;	REG_SZ
+

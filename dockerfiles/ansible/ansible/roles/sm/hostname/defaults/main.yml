@@ -1,0 +1,2 @@
+hostname:
+  fqdn: "{{ inventory_hostname }}"

@@ -1,0 +1,74 @@
+version: "3"
+services:
+  dx:
+    build:
+      context: ./dockerfiles/cadir/14.1.00
+    image: atricore/dx
+    hostname: dx
+    networks:
+      - sm
+    ports:
+      - "7777:7777"
+      - "5022:22"
+    stdin_open: true
+    tty: true
+  ps:
+    build:
+      context: ./dockerfiles/siteminder/12.8/ps
+    image: atricore/ps
+    hostname: ps
+    networks:
+      - sm
+    ports:
+      - "2022:22"
+      - "8443:8443"
+    depends_on:
+      - dx
+    stdin_open: true
+    tty: true
+  ag:
+    build:
+      context: ./dockerfiles/siteminder/12.8/ag
+    image: atricore/ag
+    hostname: ag
+    ports:
+      - "3022:22"
+      - "9090:8080"
+      - "9191:8181"
+    depends_on:
+        - ps
+    stdin_open: true
+    tty: true
+    networks:
+      sm:
+        aliases:
+          - extapp
+  app:
+    build:
+      context: ./dockerfiles/apps/resty
+    image: atricore/app
+    hostname: app
+    networks:
+      - sm
+    ports:
+      - "7070:80"
+    depends_on:
+      - ag
+    stdin_open: true
+    tty: true
+  ansible:
+    build:
+      context: ./dockerfiles/ansible
+    image: atricore/ansible
+    hostname: ansible
+    networks:
+      - sm
+    depends_on:
+        - dx
+        - ps
+        - ag
+    stdin_open: true
+    tty: true
+networks:
+  sm:
+    name: sm-net

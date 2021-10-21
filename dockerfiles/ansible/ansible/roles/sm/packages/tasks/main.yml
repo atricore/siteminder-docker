@@ -1,0 +1,12 @@
+---
+- name: "Install Packages"
+  package:
+    name: "{{ packages.present }}"
+    state: present
+  become: true
+
+- name: "Remove Packages"
+  package:
+    name: "{{ packages.remove }}"
+    state: absent
+  become: True

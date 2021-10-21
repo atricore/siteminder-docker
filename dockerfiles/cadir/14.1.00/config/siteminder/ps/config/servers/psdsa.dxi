@@ -1,0 +1,39 @@
+#
+# Initialization file written by DXnewdsa
+#
+# logging and tracing
+source "../logging/default.dxc";
+
+# schema
+source "../schema/psdsa.dxg";
+
+# knowledge
+clear dsas;
+source "../knowledge/psdsa.dxc";
+
+# operational settings
+source "../settings/default.dxc";
+
+# service limits
+source "../limits/psdsa.dxc";
+
+# access controls
+clear access;
+source "../access/default.dxc";
+
+# ssl
+source "../ssld/default.dxc";
+
+# replication agreements (rarely used)
+# source "../replication/";
+
+# multiwrite DISP recovery
+set multi-write-disp-recovery = false;
+
+# grid configuration
+set dxgrid-db-location = "data";
+set dxgrid-db-size = 500;
+set cache-index = all-attributes;
+set lookup-cache = true;
+# cache configuration
+set ignore-name-bindings = true;

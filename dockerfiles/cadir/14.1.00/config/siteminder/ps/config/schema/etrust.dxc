@@ -1,0 +1,201 @@
+schema set attribute (1.3.6.1.4.1.2552.1.1.7.1) = {
+	name = xpsParameter
+	ldap-names = xpsParameter
+	syntax = caseIgnoreString
+	single-valued
+};
+
+schema set attribute (1.3.6.1.4.1.2552.1.1.7.2) = {
+	name = xpsVendor
+	ldap-names = xpsVendor
+	syntax = caseIgnoreString
+	single-valued
+};
+
+schema set attribute (1.3.6.1.4.1.2552.1.1.7.3) = {
+	name = xpsProduct
+	ldap-names = xpsProduct
+	syntax = caseIgnoreString
+	single-valued
+};
+
+schema set attribute (1.3.6.1.4.1.2552.1.1.7.4) = {
+	name = xpsName
+	ldap-names = xpsName
+	syntax = caseIgnoreString
+	single-valued
+};
+
+schema set attribute (1.3.6.1.4.1.2552.1.1.7.5) = {
+	name = xpsValue
+	ldap-names = xpsValue
+	syntax = caseIgnoreString
+	single-valued
+};
+
+schema set attribute (1.3.6.1.4.1.2552.1.1.7.6) = {
+	name = xpsNumber
+	ldap-names = xpsNumber
+	syntax = caseIgnoreString
+	single-valued
+};
+
+schema set attribute (1.3.6.1.4.1.2552.1.1.7.7) = {
+	name = xpsCategory
+	ldap-names = xpsCategory
+	syntax = caseIgnoreString
+	single-valued
+};
+
+schema set attribute (1.3.6.1.4.1.2552.1.1.7.8) = {
+	name = xpsClass
+	ldap-names = xpsClass
+	syntax = caseIgnoreString
+	single-valued
+};
+
+schema set attribute (1.3.6.1.4.1.2552.1.1.7.9) = {
+	name = xpsParent
+	ldap-names = xpsParent
+	syntax = caseIgnoreString
+	single-valued
+};
+
+schema set attribute (1.3.6.1.4.1.2552.1.1.7.10) = {
+	name = xpsGUID
+	ldap-names = xpsGUID
+	syntax = caseIgnoreString
+	single-valued
+};
+
+schema set attribute (1.3.6.1.4.1.2552.1.1.7.11) = {
+	name = xpsTombstone
+	ldap-names = xpsTombstone
+	syntax = caseIgnoreString
+	single-valued
+};
+
+schema set attribute (1.3.6.1.4.1.2552.1.1.7.12) = {
+	name = xpsUpdateBy
+	ldap-names = xpsUpdateBy
+	syntax = caseIgnoreString
+	single-valued
+};
+
+schema set attribute (1.3.6.1.4.1.2552.1.1.7.13) = {
+	name = xpsUpdateMethod
+	ldap-names = xpsUpdateMethod
+	syntax = caseIgnoreString
+	single-valued
+};
+
+schema set attribute (1.3.6.1.4.1.2552.1.1.7.14) = {
+	name = xpsProperty
+	ldap-names = xpsProperty
+	syntax = caseIgnoreString
+};
+
+schema set attribute (1.3.6.1.4.1.2552.1.1.7.15) = {
+	name = xpsKeyValue
+	ldap-names = xpsKeyValue
+	syntax = caseIgnoreString
+	single-valued
+};
+
+schema set attribute (1.3.6.1.4.1.2552.1.1.7.16) = {
+	name = xpsXID
+	ldap-names = xpsXID
+	syntax = caseIgnoreString
+	single-valued
+};
+
+schema set attribute (1.3.6.1.4.1.2552.1.1.7.17) = {
+	name = xpsSortKey
+	ldap-names = xpsSortKey
+	syntax = caseIgnoreString
+	single-valued
+};
+
+schema set attribute (1.3.6.1.4.1.2552.1.1.7.18) = {
+	name = xpsIndexedObject
+	ldap-names = xpsIndexedObject
+	syntax = DistinguishedName
+	single-valued
+};
+
+schema set object-class (1.3.6.1.4.1.2552.1.1.8.1) = {
+	name = xpsParameterSetting
+	ldap-names = xpsParameterSetting
+	subclass-of top
+	must-contain
+	    xpsParameter,
+	    xpsVendor,
+	    xpsProduct,
+	    xpsName
+	may-contain
+		xpsValue
+};
+
+schema set object-class (1.3.6.1.4.1.2552.1.1.8.2) = {
+	name = xpsObject
+	ldap-names = xpsObject
+	subclass-of top
+	must-contain
+		xpsNumber,
+		xpsCategory,
+		xpsClass,
+		xpsGUID,
+		xpsUpdateBy,
+		xpsUpdateMethod,
+		xpsSortKey
+	may-contain
+		xpsParent,
+		xpsTombstone,
+		xpsProperty
+};
+
+schema set object-class (1.3.6.1.4.1.2552.1.1.8.3) = {
+	name = xpsXIDKey
+	ldap-names = xpsXIDKey
+	subclass-of top
+	must-contain
+		xpsXID,
+		xpsIndexedObject
+};
+
+schema set object-class (1.3.6.1.4.1.2552.1.1.8.4) = {
+	name = xpsKey
+	ldap-names = xpsKey
+	subclass-of top
+	must-contain
+		xpsKeyValue,
+		xpsIndexedObject
+};
+
+# Name bindings
+
+schema set oid-prefix xpsNameBinding = (1.3.6.1.4.1.2552.1.1.9999);
+
+schema set name-binding xpsNameBinding:1 = {
+	name = xpsParameterSetting-ou
+	xpsParameterSetting allowable-parent organizationalUnit
+	named-by xpsParameter
+};
+
+schema set name-binding xpsNameBinding:2 = {
+	name = xpsObject-ou
+	xpsObject allowable-parent organizationalUnit
+	named-by xpsNumber
+};
+
+schema set name-binding xpsNameBinding:3 = {
+	name = xpsXIDKey-ou
+	xpsXIDKey allowable-parent organizationalUnit
+	named-by xpsXID
+};
+
+schema set name-binding xpsNameBinding:4 = {
+	name = xpsKey-ou
+	xpsKey allowable-parent organizationalUnit
+	named-by xpsKeyValue
+};

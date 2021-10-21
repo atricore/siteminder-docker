@@ -1,0 +1,18 @@
+# Computer Associates DXserver/config/limits
+# $RCSfile: default.dxc,v $ $Revision: 4.11 $
+# This is a read-only default configuration file. If you need to make changes, 
+# copy this file and reference the new file from servers/<dsa>.dxi
+#
+
+# size limits
+set max-users = 1000;
+set credits = 5;
+set max-local-ops = 1000;
+set max-op-size = 10000;
+set multi-write-queue = 20000;
+
+# time limits
+set max-bind-time = none;
+set bind-idle-time = 3600;
+set max-op-time = 600;
+

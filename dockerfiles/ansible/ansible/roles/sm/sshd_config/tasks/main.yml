@@ -1,0 +1,7 @@
+---
+- name: Set key-value to /etc/ssh/sshd_config
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: "^[#]?[ \t]*{{ item.key | regex_escape() }}"
+    line: "{{ item.key }} {{ item.value }}"
+  with_dict: "{{ sshd_config.lines }}"

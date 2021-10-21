@@ -1,0 +1,4 @@
+- src: git+https://github.com/geerlingguy/ansible-role-ntp.git
+  version: master
+  name: geerlingguy/ansible-role-ntp
+  

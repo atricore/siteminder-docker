@@ -1,0 +1,12 @@
+---
+- name: Install Vim
+  package:
+    name: vim
+    state: present
+  become: true
+
+- name: Setup .vimrc file for users
+  copy:
+    src: .vimrc
+    dest: "{{ item }}/.vimrc"
+  with_items: "{{ vim.user_homes }}"

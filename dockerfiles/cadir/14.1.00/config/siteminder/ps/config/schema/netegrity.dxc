@@ -1,0 +1,2878 @@
+schema set oid-prefix smObjectClass                = (1.3.6.1.4.1.2552.1.1.3);
+schema set oid-prefix smAttribute                  = (1.3.6.1.4.1.2552.1.1.4);
+schema set oid-prefix smNameBinding                = (1.3.6.1.4.1.2552.1.1.999);
+
+
+#--------------------------------------------------
+# Attributes Declarations
+#--------------------------------------------------
+
+schema set attribute smAttribute:1 = {
+    name = smAccessAccept4
+    ldap-names = smAccessAccept4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:2 = {
+    name = smAccessChallenge4
+    ldap-names = smAccessChallenge4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:3 = {
+    name = smAccessReject4
+    ldap-names = smAccessReject4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:4 = {
+    name = smAccessRequest4
+    ldap-names = smAccessRequest4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:5 = {
+    name = smAccountingRequest4
+    ldap-names = smAccountingRequest4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:6 = {
+    name = smAccountingResponse4
+    ldap-names = smAccountingResponse4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:8 = {
+    name = smAction4
+    ldap-names = smAction4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:9 = {
+    name = smAdminDirAuth4
+    ldap-names = smAdminDirAuth4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:10 = {
+    name = smAdminOID4
+    ldap-names = smAdminOID4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:11 = {
+    name = smAdminPassword4
+    ldap-names = smAdminPassword4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:12 = {
+    name = smRights4
+    ldap-names = smRights4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:14 = {
+    name = smParentRealmOID4
+    ldap-names = smParentRealmOID4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:15 = {
+    name = smAllowAccess4
+    ldap-names = smAllowAccess4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:16 = {
+    name = smDataType4
+    ldap-names = smDataType4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:17 = {
+    name = smAgentGroupOID4
+    ldap-names = smAgentGroupOID4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:18 = {
+    name = smAgentOID4
+    ldap-names = smAgentOID4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:19 = {
+    name = smAGAgents4
+    ldap-names = smAGAgents4
+    syntax = caseIgnoreString
+};
+
+schema set attribute smAttribute:20 = {
+    name = smDomainAdminOIDs4
+    ldap-names = smDomainAdminOIDs4
+    syntax = caseIgnoreString
+};
+
+schema set attribute smAttribute:21 = {
+    name = smDomainOID4
+    ldap-names = smDomainOID4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:22 = {
+    name = smSharedSecret4
+    ldap-names = smSharedSecret4
+    syntax = caseIgnoreIA5String
+    single-valued
+};
+
+schema set attribute smAttribute:23 = {
+    name = smDomainUDs4
+    ldap-names = smDomainUDs4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:24 = {
+    name = smFilterClass4
+    ldap-names = smFilterClass4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:26 = {
+    name = smFilterPath4
+    ldap-names = smFilterPath4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:27 = {
+    name = smNamespace4
+    ldap-names = smNamespace4
+    syntax = caseIgnoreIA5String
+    single-valued
+};
+
+schema set attribute smAttribute:28 = {
+    name = smPolicyLinkOID4
+    ldap-names = smPolicyLinkOID4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:29 = {
+    name = smPolicyFlags4
+    ldap-names = smPolicyFlags4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:30 = {
+    name = smPolicyOID4
+    ldap-names = smPolicyOID4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:31 = {
+    name = smPolicyResolution4
+    ldap-names = smPolicyResolution4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:32 = {
+    name = smIPAddress4
+    ldap-names = smIPAddress4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:33 = {
+    name = smProcessAuthEvents4
+    ldap-names = smProcessAuthEvents4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:34 = {
+    name = smProcessAzEvents4
+    ldap-names = smProcessAzEvents4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:35 = {
+    name = smProtectAll4
+    ldap-names = smProtectAll4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:37 = {
+    name = smRadiusType4
+    ldap-names = smRadiusType4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:38 = {
+    name = smRealmHintiD4
+    ldap-names = smRealmHintiD4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:39 = {
+    name = smRealmOID4
+    ldap-names = smRealmOID4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:40 = {
+    name = smSelfRegOID4
+    ldap-names = smSelfRegOID4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:41 = {
+    name = smAzUserDirOID4
+    ldap-names = smAzUserDirOID4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:42 = {
+    name = smMaxTimeout4
+    ldap-names = smMaxTimeout4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:43 = {
+    name = smIdleTimeout4
+    ldap-names = smIdleTimeout4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:44 = {
+    name = smRegularExpression4
+    ldap-names = smRegularExpression4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:45 = {
+    name = smRequireCredentials4
+    ldap-names = smRequireCredentials4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:46 = {
+    name = smResource4
+    ldap-names = smResource4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:47 = {
+    name = smResourceFilter4
+    ldap-names = smResourceFilter4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:48 = {
+    name = smResourceType4
+    ldap-names = smResourceType4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:49 = {
+    name = smResponseAttrOID4
+    ldap-names = smResponseAttrOID4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:50 = {
+    name = smResponseGroupOID4
+    ldap-names = smResponseGroupOID4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:51 = {
+    name = smResponseOID4
+    ldap-names = smResponseOID4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:52 = {
+    name = smRGResponses4
+    ldap-names = smRGResponses4
+    syntax = caseIgnoreString
+};
+
+schema set attribute smAttribute:53 = {
+    name = smTTL4
+    ldap-names = smTTL4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:54 = {
+    name = smFlags4
+    ldap-names = smFlags4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:55 = {
+    name = smRGRules4
+    ldap-names = smRGRules4
+    syntax = caseIgnoreString
+};
+
+schema set attribute smAttribute:56 = {
+    name = smRuleGroupOID4
+    ldap-names = smRuleGroupOID4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:57 = {
+    name = smRuleOID4
+    ldap-names = smRuleOID4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:58 = {
+    name = smIsEnabled4
+    ldap-names = smIsEnabled4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:59 = {
+    name = smSchemeOID4
+    ldap-names = smSchemeOID4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:60 = {
+    name = smSearchResults4
+    ldap-names = smSearchResults4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:61 = {
+    name = smSearchRoot4
+    ldap-names = smSearchRoot4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:62 = {
+    name = smSearchScope4
+    ldap-names = smSearchScope4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:63 = {
+    name = smSearchTimeout4
+    ldap-names = smSearchTimeout4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:64 = {
+    name = smSecureConnection4
+    ldap-names = smSecureConnection4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:65 = {
+    name = smServer4
+    ldap-names = smServer4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:66 = {
+    name = smSchemeLib4
+    ldap-names = smSchemeLib4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:67 = {
+    name = smSchemeParam4
+    ldap-names = smSchemeParam4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:68 = {
+    name = smSchemeLevel4
+    ldap-names = smSchemeLevel4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:69 = {
+    name = smSchemeSecret4
+    ldap-names = smSchemeSecret4
+    syntax = caseIgnoreIA5String
+    single-valued
+};
+
+schema set attribute smAttribute:70 = {
+    name = smisTemplate4
+    ldap-names = smisTemplate4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:71 = {
+    name = smisUsedbyAdmin4
+    ldap-names = smisUsedbyAdmin4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:72 = {
+    name = smSchemeType4
+    ldap-names = smSchemeType4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:73 = {
+    name = smTime4
+    ldap-names = smTime4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:74 = {
+    name = smUserDirectoryOID4
+    ldap-names = smUserDirectoryOID4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:75 = {
+    name = smUserLookupEnd4
+    ldap-names = smUserLookupEnd4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:76 = {
+    name = smUserLookupStart4
+    ldap-names = smUserLookupStart4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:77 = {
+    name = smODBCQueryOID4
+    ldap-names = smODBCQueryOID4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:78 = {
+    name = smDisabledAttr4
+    ldap-names = smDisabledAttr4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:79 = {
+    name = smUniversaliDAttr4
+    ldap-names = smUniversaliDAttr4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:81 = {
+    name = smMaxReferrals4
+    ldap-names = smMaxReferrals4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:82 = {
+    name = smUserName4
+    ldap-names = smUserName4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:83 = {
+    name = smUserPolicyOID4
+    ldap-names = smUserPolicyOID4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:84 = {
+    name = smValue4
+    ldap-names = smValue4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:85 = {
+    name = smAgentTypeActions4
+    ldap-names = smAgentTypeActions4
+    syntax = caseIgnoreString
+};
+
+schema set attribute smAttribute:86 = {
+    name = smAgentTypeAttriD4
+    ldap-names = smAgentTypeAttriD4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:87 = {
+    name = smAgentTypeAttrOID4
+    ldap-names = smAgentTypeAttrOID4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:88 = {
+    name = smAttrValues4
+    ldap-names = smAttrValues4
+    syntax = caseIgnoreString
+};
+
+schema set attribute smAttribute:89 = {
+    name = smAgentTypeOID4
+    ldap-names = smAgentTypeOID4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:90 = {
+    name = smAgentTyperfcid4
+    ldap-names = smAgentTyperfcid4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:91 = {
+    name = smAgentTypeSpecificBytes4
+    ldap-names = smAgentTypeSpecificBytes4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:92 = {
+    name = smAgentTypeType4
+    ldap-names = smAgentTypeType4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:93 = {
+    name = smAgentCommandOID4
+    ldap-names = smAgentCommandOID4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:94 = {
+    name = smTimeStamp4
+    ldap-names = smTimeStamp4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:95 = {
+    name = smCommand4
+    ldap-names = smCommand4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:96 = {
+    name = smCommandData4
+    ldap-names = smCommandData4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:97 = {
+    name = smServerCommandOID4
+    ldap-names = smServerCommandOID4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:98 = {
+    name = smUserPassword4
+    ldap-names = smUserPassword4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:99 = {
+    name = smAuthAzMapOID4
+    ldap-names = smAuthAzMapOID4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:100 = {
+    name = smAuthDirOID4
+    ldap-names = smAuthDirOID4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:101 = {
+    name = smAzDirOID4
+    ldap-names = smAzDirOID4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:102 = {
+    name = smAuthDirAttrName4
+    ldap-names = smAuthDirAttrName4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:103 = {
+    name = smAzDirAttrName4
+    ldap-names = smAzDirAttrName4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:104 = {
+    name = smAuthAzMapType4
+    ldap-names = smAuthAzMapType4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:105 = {
+    name = smcertmapOID4
+    ldap-names = smcertmapOID4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:106 = {
+    name = smIssuerDN4
+    ldap-names = smIssuerDN4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:107 = {
+    name = smmaptoldap4
+    ldap-names = smmaptoldap4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:108 = {
+    name = smldapcadn4
+    ldap-names = smldapcadn4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:109 = {
+    name = smdirtype4
+    ldap-names = smdirtype4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:110 = {
+    name = smqueryenumerate4
+    ldap-names = smqueryenumerate4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:111 = {
+    name = smquerygetobjinfo4
+    ldap-names = smquerygetobjinfo4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:112 = {
+    name = smquerylookup4
+    ldap-names = smquerylookup4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:113 = {
+    name = smqueryinituser4
+    ldap-names = smqueryinituser4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:114 = {
+    name = smqueryauthenticateuser4
+    ldap-names = smqueryauthenticateuser4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:115 = {
+    name = smquerygetuserprop4
+    ldap-names = smquerygetuserprop4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:116 = {
+    name = smquerysetuserprop4
+    ldap-names = smquerysetuserprop4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:117 = {
+    name = smquerygetuserprops4
+    ldap-names = smquerygetuserprops4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:118 = {
+    name = smquerylookupuser4
+    ldap-names = smquerylookupuser4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:119 = {
+    name = smquerygetgroups4
+    ldap-names = smquerygetgroups4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:120 = {
+    name = smqueryisgroupmember4
+    ldap-names = smqueryisgroupmember4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:121 = {
+    name = smquerygetgroupprop4
+    ldap-names = smquerygetgroupprop4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:122 = {
+    name = smquerysetgroupprop4
+    ldap-names = smquerysetgroupprop4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:123 = {
+    name = smquerygetgroupprops4
+    ldap-names = smquerygetgroupprops4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:124 = {
+    name = smquerylookupgroup4
+    ldap-names = smquerylookupgroup4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:125 = {
+    name = smregistrationurl4
+    ldap-names = smregistrationurl4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:126 = {
+    name = smtemplatepath4
+    ldap-names = smtemplatepath4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:129 = {
+    name = smwelcomepathprovider4
+    ldap-names = smwelcomepathprovider4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:130 = {
+    name = smblobattr4
+    ldap-names = smblobattr4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:132 = {
+    name = smSyncAudit4
+    ldap-names = smSyncAudit4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:133 = {
+    name = smGuidAttr4
+    ldap-names = smGuidAttr4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:134 = {
+    name = smAllowSaveCreds4
+    ldap-names = smAllowSaveCreds4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:135 = {
+    name = smIsRadius4
+    ldap-names = smIsRadius4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:136 = {
+    name = smIsAffiliate4
+    ldap-names = smIsAffiliate4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:137 = {
+    name = smDisallowAPS4
+    ldap-names = smDisallowAPS4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:138 = {
+    name = smSaveCredsDays4
+    ldap-names = smSaveCredsDays4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:139 = {
+    name = smEnableLogging4
+    ldap-names = smEnableLogging4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:140 = {
+    name = smIgnorePwCheck4
+    ldap-names = smIgnorePwCheck4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:141 = {
+    name = smPasswordPolicyOID4
+    ldap-names = smPasswordPolicyOID4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:142 = {
+    name = smActive4
+    ldap-names = smActive4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:143 = {
+    name = smGlobal4
+    ldap-names = smGlobal4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:144 = {
+    name = smPath4
+    ldap-names = smPath4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:145 = {
+    name = smClass4
+    ldap-names = smClass4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:146 = {
+    name = smResolution4
+    ldap-names = smResolution4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:147 = {
+    name = smLoginMaxFailures4
+    ldap-names = smLoginMaxFailures4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:148 = {
+    name = smLoginMaxInactivity4
+    ldap-names = smLoginMaxInactivity4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:151 = {
+    name = smDictionaryType4
+    ldap-names = smDictionaryType4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:152 = {
+    name = smDictionaryName4
+    ldap-names = smDictionaryName4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:153 = {
+    name = smDictionaryPartial4
+    ldap-names = smDictionaryPartial4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:155 = {
+    name = smReenablement4
+    ldap-names = smReenablement4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:156 = {
+    name = smPasswordBehavior4
+    ldap-names = smPasswordBehavior4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:157 = {
+    name = smExpiredRedirect4
+    ldap-names = smExpiredRedirect4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:158 = {
+    name = smImmediateRedirect4
+    ldap-names = smImmediateRedirect4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:159 = {
+    name = smInactiveRedirect4
+    ldap-names = smInactiveRedirect4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:160 = {
+    name = smWarningRedirect4
+    ldap-names = smWarningRedirect4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:161 = {
+    name = smPWMaxLength4
+    ldap-names = smPWMaxLength4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:162 = {
+    name = smPWMinLength4
+    ldap-names = smPWMinLength4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:163 = {
+    name = smPWMaxRepeatingChar4
+    ldap-names = smPWMaxRepeatingChar4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:164 = {
+    name = smPWMinAlphaNum4
+    ldap-names = smPWMinAlphaNum4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:165 = {
+    name = smPWMinAlpha4
+    ldap-names = smPWMinAlpha4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:166 = {
+    name = smPWMinNonAlpha4
+    ldap-names = smPWMinNonAlpha4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:167 = {
+    name = smPWMinNonPrintable4
+    ldap-names = smPWMinNonPrintable4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:168 = {
+    name = smPWMinNumbers4
+    ldap-names = smPWMinNumbers4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:169 = {
+    name = smPWMinPunctuation4
+    ldap-names = smPWMinPunctuation4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:170 = {
+    name = smPWReuseCount4
+    ldap-names = smPWReuseCount4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:171 = {
+    name = smPWReuseDelay4
+    ldap-names = smPWReuseDelay4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:172 = {
+    name = smPWPercentDifferent4
+    ldap-names = smPWPercentDifferent4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:173 = {
+    name = smPWPercentSequence4
+    ldap-names = smPWPercentSequence4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:174 = {
+    name = smPWSpecialsLength4
+    ldap-names = smPWSpecialsLength4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:175 = {
+    name = smMaxFailuresRedirect4
+    ldap-names = smMaxFailuresRedirect4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:176 = {
+    name = smKeyManagementOID4
+    ldap-names = smKeyManagementOID4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:177 = {
+    name = smChangeFreq4
+    ldap-names = smChangeFreq4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:178 = {
+    name = smChangeValue4
+    ldap-names = smChangeValue4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:179 = {
+    name = smNewKeySetTime4
+    ldap-names = smNewKeySetTime4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:180 = {
+    name = smOldKeySetTime4
+    ldap-names = smOldKeySetTime4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:181 = {
+    name = smFireHour4
+    ldap-names = smFireHour4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:182 = {
+    name = smPersistentKey4
+    ldap-names = smPersistentKey4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:183 = {
+    name = smAgentKeyOID4
+    ldap-names = smAgentKeyOID4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:184 = {
+    name = smKeyMarker4
+    ldap-names = smKeyMarker4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:185 = {
+    name = smKey4
+    ldap-names = smKey4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:186 = {
+    name = smRootConfigOID4
+    ldap-names = smRootConfigOID4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:187 = {
+    name = smEnableUserTracking4
+    ldap-names = smEnableUserTracking4
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:188 = {
+    name = smDynamicPrefs4
+    ldap-names = smDynamicPrefs4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:189 = {
+    name = smPasswordAttribute4
+    ldap-names = smPasswordAttribute4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:190 = {
+    name = smEmailAddressAttr4
+    ldap-names = smEmailAddressAttr4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:191 = {
+    name = smChallengeRespAttr4
+    ldap-names = smChallengeRespAttr4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:192 = {
+    name = smquerysetpassword4
+    ldap-names = smquerysetpassword4
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:220 = {
+    name = smvariableoid5
+    ldap-names = smvariableoid5
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:221 = {
+    name = smDefinition5
+    ldap-names = smDefinition5
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:222 = {
+    name = smPreFetchFlag5
+    ldap-names = smPreFetchFlag5
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:223 = {
+    name = smNestedVariableOIDs5
+    ldap-names = smNestedVariableOIDs5
+    syntax = caseIgnoreString
+};
+
+schema set attribute smAttribute:224 = {
+    name = smMetaData5
+    ldap-names = smMetaData5
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:225 = {
+    name = smreturntype5
+    ldap-names = smreturntype5
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:226 = {
+    name = smvariabletypeoid5
+    ldap-names = smvariabletypeoid5
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:227 = {
+    name = smfilter5
+    ldap-names = smfilter5
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:228 = {
+    name = smActiveExprOID5
+    ldap-names = smActiveExprOID5
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:229 = {
+    name = smexpr5
+    ldap-names = smexpr5
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:230 = {
+    name = smusesvariables5
+    ldap-names = smusesvariables5
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:231 = {
+    name = smVariableOIDs5
+    ldap-names = smVariableOIDs5
+    syntax = caseIgnoreString
+};
+
+schema set attribute smAttribute:232 = {
+    name = smusractiveexproid5
+    ldap-names = smusractiveexproid5
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:233 = {
+    name = smPropertyOID5
+    ldap-names = smPropertyOID5
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:234 = {
+    name = smPropertySectionOID5
+    ldap-names = smPropertySectionOID5
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:235 = {
+    name = smPropertyCollectionOID5
+    ldap-names = smPropertyCollectionOID5
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:236 = {
+    name = smPropertyValue5
+    ldap-names = smPropertyValue5
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:237 = {
+    name = smpropertyflags5
+    ldap-names = smpropertyflags5
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:238 = {
+    name = smPersistentSessionType5
+    ldap-names = smPersistentSessionType5
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:239 = {
+    name = smSessionDrift5
+    ldap-names = smSessionDrift5
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:240 = {
+    name = smTaggedStringOID5
+    ldap-names = smTaggedStringOID5
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:241 = {
+    name = smTaggedStringValue5
+    ldap-names = smTaggedStringValue5
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:242 = {
+    name = smNoMatch5
+    ldap-names = smNoMatch5
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:243 = {
+    name = smPWMinUpperAlpha5
+    ldap-names = smPWMinUpperAlpha5
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:244 = {
+    name = smPwdChangeDaysGrace5
+    ldap-names = smPwdChangeDaysGrace5
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:245 = {
+    name = smPasswordCheckLib5
+    ldap-names = smPasswordCheckLib5
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:246 = {
+    name = smPriority5
+    ldap-names = smPriority5
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:247 = {
+    name = smPWMinLowerAlpha5
+    ldap-names = smPWMinLowerAlpha5
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:248 = {
+    name = smPwdChangeGraceLogins5
+    ldap-names = smPwdChangeGraceLogins5
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:249 = {
+    name = smLoginDaysWarning5
+    ldap-names = smLoginDaysWarning5
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:250 = {
+    name = smPwdChangePeriod5
+    ldap-names = smPwdChangePeriod5
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:251 = {
+    name = smTrustedHostOID5
+    ldap-names = smTrustedHostOID5
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:252 = {
+    name = smIs4xTrustedHost5
+    ldap-names = smIs4xTrustedHost5
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:253 = {
+    name = smEnableSecurityContext5
+    ldap-names = smEnableSecurityContext5
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:254 = {
+    name = smMajorVersion5
+    ldap-names = smMajorVersion5
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:255 = {
+    name = smMinorVersion5
+    ldap-names = smMinorVersion5
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:256 = {
+    name = smMode5
+    ldap-names = smMode5
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:257 = {
+    name = smDomainMode5
+    ldap-names = smDomainMode5
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:258 = {
+    name = smImsEnvironmentOIDs5
+    ldap-names = smImsEnvironmentOIDs5
+    syntax = caseIgnoreString
+};
+
+schema set attribute smAttribute:259 = {
+    name = smSecretRolloverEnabled6
+    ldap-names = smSecretRolloverEnabled6
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:260 = {
+    name = smSecretGenTime6
+    ldap-names = smSecretGenTime6
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:261 = {
+    name = smSecretUsedTime6
+    ldap-names = smSecretUsedTime6
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:262 = {
+    name = smSecretPreviousSecret6
+    ldap-names = smSecretPreviousSecret6
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:263 = {
+    name = smSharedSecretPolicyOID6
+    ldap-names = smSharedSecretPolicyOID6
+    syntax = caseIgnoreString
+    single-valued
+};
+
+schema set attribute smAttribute:264 = {
+    name = smRolloverPolicyEnabled6
+    ldap-names = smRolloverPolicyEnabled6
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:265 = {
+    name = smRolloverChangePeriod6
+    ldap-names = smRolloverChangePeriod6
+    syntax = integer
+    single-valued
+};
+
+schema set attribute smAttribute:266 = {
+    name = smRolloverChangeFrequency6
+    ldap-names = smRolloverChangeFrequency6
+    syntax = integer
+    single-valued
+};
+
+# Session Server Attributes Declarations
+
+schema set attribute smAttribute:270 = {
+          name = smSessionId
+          ldap-names = smSessionId, sid
+          syntax = caseIgnoreString
+          single-valued
+          description = "Session-Id of the session"
+};
+
+schema set attribute smAttribute:271 = {
+          name = smVersion
+          syntax = caseIgnoreString
+          single-valued
+          description = "smVersion"
+};
+
+schema set attribute smAttribute:272 = {
+          name = smMaxIdleTime
+          syntax = integer
+          single-valued
+          description = "smMaxIdleTime to be used for maximum idle time for a session."
+};
+
+schema set attribute smAttribute:273 = {
+          name = smExpirationTime
+          syntax = generalizedTime
+          single-valued
+          description = "smExpirationTime"
+};
+
+schema set attribute smAttribute:274 = {
+          name = smIdleExpirationTime
+          syntax = generalizedTime
+          single-valued
+          description = "smIdleExpirationTime"
+};
+
+schema set attribute smAttribute:275 = {
+          name = smSessionStatus
+          syntax = integer
+          single-valued
+          description = "smSessionStatus"
+};
+
+schema set attribute smAttribute:276 = {
+          name = smSessionBlob
+          syntax = caseIgnoreString
+          single-valued
+          description = "smSessionBlob"
+};
+
+schema set attribute smAttribute:277 = {
+          name = smLastAccessTime
+          syntax = generalizedTime
+          single-valued
+          description = "smLastAccessTime"
+};
+
+schema set attribute smAttribute:278 = {
+          name = smVarType
+          ldap-names = smVarType
+          syntax = caseIgnoreString
+          single-valued
+          description = "smVarType defines the type of variable, for example SAML_ARTIFACT"
+};
+
+schema set attribute smAttribute:279 = {
+          name = smSessionVariableData
+          syntax = caseIgnoreString
+          multi-valued
+          description = "smSessionVariableData multi-value field that contains the Session Variables in a Key=Value format"
+};
+
+schema set attribute smAttribute:280 = {
+          name = smSessionVariablesMode
+          syntax = integer
+          multi-valued
+          description = "Suggest whether variables are stored on the session object or under it"
+};
+
+schema set attribute smAttribute:281 = {
+          name = smSearchData
+          syntax = caseIgnoreString
+          single-valued
+          description = "smSearchData to be used for search."
+};
+
+schema set attribute smAttribute:282 = {
+          name = smVariableName
+          ldap-names = smVariableName, smVarId
+          syntax = caseIgnoreString
+          single-valued
+          description = "smVariableName used for storing session variable name and expiry id."
+};
+
+schema set attribute smAttribute:283 = {
+          name = smVariableValue
+          syntax = caseIgnoreString
+          single-valued
+          description = "smVariableValue used for storing session variable value and expiry data."
+};
+
+schema set attribute smAttribute:284 = {
+          name = smFullVariableName
+          syntax = caseIgnoreString
+          single-valued
+          description = "smFullVariableName used for storing session variable value and expiry data."
+};
+
+schema set attribute smAttribute:285 = {
+          name = smLastmClose
+          syntax = generalizedTime
+          single-valued
+          description = "Last maintenance close time of the session"
+};
+
+schema set attribute smAttribute:286 = {
+          name = smTimeValue
+          syntax = Integer
+          single-valued
+          description = "time value used to identify timedLock"
+};
+
+schema set attribute smAttribute:287 = {
+          name = smServerId
+          syntax = caseIgnoreString
+          single-valued
+          description = "the id of a server in a 'host:port' format"
+};
+
+
+
+#--------------------------------------------------
+# Objectclass Declarations
+#--------------------------------------------------
+
+schema set object-class smObjectClass:4 = {
+    name = smAgentgroup4
+    ldap-names = smAgentgroup4
+    subclass-of top
+    must-contain
+        objectclass,
+        smAgentGroupOID4,
+        smAgentTypeOID4,
+        cn
+    may-contain
+        description,
+        smAGAgents4
+};
+
+schema set object-class smObjectClass:5 = {
+    name = smAdmin4
+    ldap-names = smAdmin4
+    subclass-of top
+    must-contain
+        objectclass,
+        smAdminOID4,
+        cn
+    may-contain
+        description,
+        smAdminPassword4,
+        smAdminDirAuth4,
+        smSchemeOID4,
+        smUserDirectoryOID4,
+        smRights4
+};
+
+schema set object-class smObjectClass:8 = {
+    name = smPolicyLink4
+    ldap-names = smPolicyLink4
+    subclass-of top
+    must-contain
+        objectclass,
+        smPolicyLinkOID4,
+        smPolicyOID4,
+        smDomainOID4
+    may-contain
+        smRuleOID4,
+        smResponseOID4
+};
+
+schema set object-class smObjectClass:9 = {
+    name = smResponse4
+    ldap-names = smResponse4
+    subclass-of top
+    must-contain
+        objectclass,
+        cn,
+        smResponseOID4,
+        smDomainOID4
+    may-contain
+        description,
+        smAgentTypeOID4,
+        smAccessAccept4,
+        smAccessChallenge4,
+        smAccessReject4
+};
+
+schema set object-class smObjectClass:12 = {
+    name = smResponseGroup4
+    ldap-names = smResponseGroup4
+    subclass-of top
+    must-contain
+        objectclass,
+        cn,
+        smResponseGroupOID4,
+        smDomainOID4
+    may-contain
+        description,
+        smAgentTypeOID4,
+        smRGResponses4
+};
+
+schema set object-class smObjectClass:14 = {
+    name = smRuleGroup4
+    ldap-names = smRuleGroup4
+    subclass-of top
+    must-contain
+        objectclass,
+        cn,
+        smRuleGroupOID4,
+        smDomainOID4
+    may-contain
+        description,
+        smAgentTypeOID4,
+        smRGRules4
+};
+
+schema set object-class smObjectClass:15 = {
+    name = smScheme4
+    ldap-names = smScheme4
+    subclass-of top
+    must-contain
+        objectclass,
+        cn,
+        smSchemeOID4
+    may-contain
+        description,
+        smSchemeLevel4,
+        smSchemeSecret4,
+        smSchemeLib4,
+        smisTemplate4,
+        smisUsedbyAdmin4,
+        smSchemeParam4,
+        smSchemeType4,
+        smAllowSaveCreds4,
+        smIsRadius4,
+        smDisallowAPS4,
+        smSaveCredsDays4,
+        smIgnorePwCheck4
+};
+
+schema set object-class smObjectClass:16 = {
+    name = smUserPolicy4
+    ldap-names = smUserPolicy4
+    subclass-of top
+    must-contain
+        objectclass,
+        smUserPolicyOID4,
+        smDomainOID4,
+        smPolicyOID4
+    may-contain
+        smUserDirectoryOID4,
+        smFilterClass4,
+        smFilterPath4,
+        smPolicyResolution4,
+        smPolicyFlags4
+};
+
+schema set object-class smObjectClass:17 = {
+    name = smAgentType4
+    ldap-names = smAgentType4
+    subclass-of top
+    must-contain
+        objectclass,
+        cn,
+        smAgentTypeOID4
+    may-contain
+        description,
+        smAgentTyperfcid4,
+        smAgentTypeType4,
+        smResourceType4,
+        smAgentTypeSpecificBytes4,
+        smAgentTypeActions4
+};
+
+schema set object-class smObjectClass:18 = {
+    name = smAgentTypeAttr4
+    ldap-names = smAgentTypeAttr4
+    subclass-of top
+    must-contain
+        objectclass,
+        cn,
+        smAgentTypeAttrOID4,
+        smAgentTypeOID4
+    may-contain
+        description,
+        smDataType4,
+        smAgentTypeAttriD4,
+        smRadiusType4,
+        smAccessRequest4,
+        smAccessAccept4,
+        smAccessReject4,
+        smAccessChallenge4,
+        smAccountingRequest4,
+        smAccountingResponse4,
+        smAttrValues4
+};
+
+schema set object-class smObjectClass:19 = {
+    name = smAgentCommand4
+    ldap-names = smAgentCommand4
+    subclass-of top
+    must-contain
+        objectclass,
+        smAgentCommandOID4,
+        smTimeStamp4,
+        smCommand4
+    may-contain
+        smCommandData4
+};
+
+schema set object-class smObjectClass:20 = {
+    name = smServerCommand4
+    ldap-names = smServerCommand4
+    subclass-of top
+    must-contain
+        objectclass,
+        smServerCommandOID4,
+        smTimeStamp4,
+        smCommand4
+    may-contain
+        smCommandData4
+};
+
+schema set object-class smObjectClass:21 = {
+    name = smauthazmap4
+    ldap-names = smauthazmap4
+    subclass-of top
+    must-contain
+        objectclass,
+        smAuthAzMapOID4
+    may-contain
+        smAuthDirOID4,
+        smAzDirOID4,
+        smAuthDirAttrName4,
+        smAzDirAttrName4,
+        smAuthAzMapType4
+};
+
+schema set object-class smObjectClass:22 = {
+    name = smcertmap4
+    ldap-names = smcertmap4
+    subclass-of top
+    must-contain
+        objectclass,
+        cn,
+        smcertmapOID4,
+        smUserDirectoryOID4
+    may-contain
+        description,
+        smIssuerDN4,
+        smmaptoldap4,
+        smldapcadn4,
+        smdirtype4,
+        smFlags4
+};
+
+schema set object-class smObjectClass:23 = {
+    name = smodbcquery4
+    ldap-names = smodbcquery4
+    subclass-of top
+    must-contain
+        objectclass,
+        cn,
+        smODBCQueryOID4
+    may-contain
+        description,
+        smqueryenumerate4,
+        smquerygetobjinfo4,
+        smquerylookup4,
+        smqueryinituser4,
+        smqueryauthenticateuser4,
+        smquerygetuserprop4,
+        smquerysetuserprop4,
+        smquerygetuserprops4,
+        smquerylookupuser4,
+        smquerygetgroups4,
+        smqueryisgroupmember4,
+        smquerygetgroupprop4,
+        smquerysetgroupprop4,
+        smquerygetgroupprops4,
+        smquerylookupgroup4,
+        smquerysetpassword4
+};
+
+schema set object-class smObjectClass:24 = {
+    name = smselfreg4
+    ldap-names = smselfreg4
+    subclass-of top
+    must-contain
+        objectclass,
+        cn,
+        smSelfRegOID4,
+        smUserDirectoryOID4
+    may-contain
+        description,
+        smregistrationurl4,
+        smtemplatepath4,
+        smwelcomepathprovider4,
+        smEnableLogging4
+};
+
+schema set object-class smObjectClass:26 = {
+    name = smKeyManagement4
+    ldap-names = smKeyManagement4
+    subclass-of top
+    must-contain
+        objectclass,
+        smKeyManagementOID4
+    may-contain
+        smIsEnabled4,
+        smChangeFreq4,
+        smChangeValue4,
+        smNewKeySetTime4,
+        smOldKeySetTime4,
+        smFireHour4,
+        smPersistentKey4
+};
+
+schema set object-class smObjectClass:27 = {
+    name = smAgentKey4
+    ldap-names = smAgentKey4
+    subclass-of top
+    must-contain
+        objectclass,
+        smAgentKeyOID4
+    may-contain
+        smKeyMarker4,
+        smKey4
+};
+
+schema set object-class smObjectClass:29 = {
+    name = smVariable5
+    ldap-names = smVariable5
+    subclass-of top
+    must-contain
+        objectclass,
+        cn,
+        smvariableoid5,
+        smDomainOID4
+    may-contain
+        description,
+        smVariableTypeOID5,
+        smDefinition5,
+        smPreFetchFlag5,
+        smNestedVariableOIDs5,
+        smMetaData5,
+        smreturntype5
+};
+
+schema set object-class smObjectClass:30 = {
+    name = smActiveExpr5
+    ldap-names = smActiveExpr5
+    subclass-of top
+    must-contain
+        objectclass,
+        smActiveExprOID5,
+        smDomainOID4
+    may-contain
+        smexpr5,
+        smusesvariables5,
+        smVariableOIDs5
+};
+
+schema set object-class smObjectClass:31 = {
+    name = smVariableType5
+    ldap-names = smVariableType5
+    subclass-of top
+    must-contain
+        objectclass,
+        cn,
+        smvariabletypeoid5
+    may-contain
+        description,
+        smfilter5
+};
+
+schema set object-class smObjectClass:32 = {
+    name = smProperty5
+    ldap-names = smProperty5
+    subclass-of top
+    must-contain
+        objectclass,
+        cn,
+        smPropertyOID5,
+        smPropertySectionOID5
+    may-contain
+        description,
+        smPropertyValue5,
+        smpropertyflags5
+};
+
+schema set object-class smObjectClass:33 = {
+    name = smPropertySection5
+    ldap-names = smPropertySection5
+    subclass-of top
+    must-contain
+        objectclass,
+        cn,
+        smPropertySectionOID5,
+        smPropertyCollectionOID5
+    may-contain
+        description
+};
+
+schema set object-class smObjectClass:34 = {
+    name = smPropertyCollection5
+    ldap-names = smPropertyCollection5
+    subclass-of top
+    must-contain
+        objectclass,
+        cn,
+        smPropertyCollectionOID5
+    may-contain
+        description
+};
+
+schema set object-class smObjectClass:35 = {
+    name = smTaggedString5
+    ldap-names = smTaggedString5
+    subclass-of top
+    must-contain
+        objectclass,
+        cn,
+        smTaggedStringOID5,
+        smpasswordpolicyoid4
+    may-contain
+        smNoMatch5,
+        smTaggedStringValue5
+};
+
+schema set object-class smObjectClass:36 = {
+    name = smTrustedHost5
+    ldap-names = smTrustedHost5
+    subclass-of top
+    must-contain
+        objectclass,
+        cn,
+        smTrustedHostOID5,
+        smSharedSecret4,
+        smipaddress4,
+        smIs4xTrustedHost5
+    may-contain
+        description
+};
+
+schema set object-class smObjectClass:37 = {
+    name = smAgent5
+    ldap-names = smAgent5
+    subclass-of top
+    must-contain
+        objectclass,
+        cn,
+        smAgentOID4,
+        smAgentTypeOID4
+    may-contain
+        description,
+        smRealmHintiD4
+};
+
+schema set object-class smObjectClass:38 = {
+    name = smdomain5
+    ldap-names = smdomain5
+    subclass-of top
+    must-contain
+        objectclass,
+        cn,
+        smDomainOID4
+    may-contain
+        description,
+        smDomainUDs4,
+        smDomainAdminOIDs4,
+        smIsAffiliate4,
+        smDomainMode5
+};
+
+schema set object-class smObjectClass:39 = {
+    name = smpolicy5
+    ldap-names = smpolicy5
+    subclass-of top
+    must-contain
+        objectclass,
+        smPolicyOID4,
+        smDomainOID4,
+        cn
+    may-contain
+        description,
+        smActiveExprOID5,
+        smTime4,
+        smAllowAccess4,
+        smIsEnabled4,
+        smIPAddress4,
+        smusractiveexproid5
+};
+
+schema set object-class smObjectClass:40 = {
+    name = smRealm5
+    ldap-names = smRealm5
+    subclass-of top
+    must-contain
+        objectclass,
+        cn,
+        smRealmOID4,
+        smDomainOID4
+    may-contain
+        description,
+        smAgentOID4,
+        smProcessAuthEvents4,
+        smProcessAzEvents4,
+        smSchemeOID4,
+        smAgentTypeOID4,
+        smProtectAll4,
+        smResourceFilter4,
+        smSelfRegOID4,
+        smAzUserDirOID4,
+        smMaxTimeout4,
+        smIdleTimeout4,
+        smParentRealmOID4,
+        smPersistentSessionType5,
+        smSessionDrift5,
+        smSyncAudit4
+};
+
+schema set object-class smObjectClass:41 = {
+    name = smResponseAttr5
+    ldap-names = smResponseAttr5
+    subclass-of top
+    must-contain
+        objectclass,
+        smResponseAttrOID4,
+        smResponseOID4,
+        smDomainOID4
+    may-contain
+        smValue4,
+        smAgentTypeAttrOID4,
+        smTTL4,
+        smFlags4,
+        smActiveExprOID5
+};
+
+schema set object-class smObjectClass:42 = {
+    name = smRule5
+    ldap-names = smRule5
+    subclass-of top
+    must-contain
+        objectclass,
+        cn,
+        smRuleOID4,
+        smDomainOID4
+    may-contain
+        description,
+        smAgentTypeOID4,
+        smRealmOID4,
+        smAllowAccess4,
+        smRegularExpression4,
+        smActiveExprOID5,
+        smTime4,
+        smAction4,
+        smResource4,
+        smIsEnabled4
+};
+
+schema set object-class smObjectClass:43 = {
+    name = smPasswordPolicy5
+    ldap-names = smPasswordPolicy5
+    subclass-of top
+    must-contain
+        objectclass,
+        cn,
+        smPasswordPolicyOID4,
+        smUserDirectoryOID4
+    may-contain
+        description,
+        smActive4,
+        smGlobal4,
+        smPath4,
+        smClass4,
+        smResolution4,
+        smLoginMaxFailures4,
+        smLoginMaxInactivity4,
+        smPwdChangeGraceLogins5,
+        smLoginDaysWarning5,
+        smDictionaryType4,
+        smDictionaryName4,
+        smDictionaryPartial4,
+        smPwdChangePeriod5,
+        smReenablement4,
+        smPasswordBehavior4,
+        smExpiredRedirect4,
+        smImmediateRedirect4,
+        smInactiveRedirect4,
+        smWarningRedirect4,
+        smPWMaxLength4,
+        smPWMinLength4,
+        smPWMaxRepeatingChar4,
+        smPWMinAlphaNum4,
+        smPWMinAlpha4,
+        smPWMinNonAlpha4,
+        smPWMinNonPrintable4,
+        smPWMinNumbers4,
+        smPWMinPunctuation4,
+        smPWReuseCount4,
+        smPWReuseDelay4,
+        smPWPercentDifferent4,
+        smPWPercentSequence4,
+        smPWSpecialsLength4,
+        smMaxFailuresRedirect4,
+        smPriority5,
+        smPWMinLowerAlpha5,
+        smPWMinUpperAlpha5,
+        smPwdChangeDaysGrace5,
+        smPasswordCheckLib5
+};
+
+schema set object-class smObjectClass:44 = {
+    name = smRootConfig5
+    ldap-names = smRootConfig5
+    subclass-of top
+    must-contain
+        objectclass,
+        smRootConfigOID4
+    may-contain
+        smEnableUserTracking4,
+        smDynamicPrefs4,
+        smMajorVersion5,
+        smMinorVersion5,
+        smMode5
+};
+
+schema set object-class smObjectClass:45 = {
+    name = smuserdirectory5
+    ldap-names = smuserdirectory5
+    subclass-of top
+    must-contain
+        objectclass,
+        cn,
+        smNamespace4,
+        smServer4,
+        smUserDirectoryOID4
+    may-contain
+        description,
+        smSearchRoot4,
+        smUserLookupStart4,
+        smUserLookupEnd4,
+        smUserPassword4,
+        smUserName4,
+        smSearchTimeout4,
+        smSearchResults4,
+        smSearchScope4,
+        smSecureConnection4,
+        smRequireCredentials4,
+        smODBCQueryOID4,
+        smDisabledAttr4,
+        smUniversaliDAttr4,
+        smGuidAttr4,
+        smblobattr4,
+        smMaxReferrals4,
+        smPasswordAttribute4,
+        smEmailAddressAttr4,
+        smChallengeRespAttr4,
+        smEnableSecurityContext5
+};
+
+schema set object-class smObjectClass:46 = {
+    name = smDomainAux5
+    ldap-names = smDomainAux5
+    subclass-of top
+    kind = auxiliary
+    may-contain
+        smImsEnvironmentOIDs5
+};
+
+schema set object-class smObjectClass:47 = {
+    name = smTrustedHostAux6
+    ldap-names = smTrustedHostAux6
+    subclass-of top
+    kind = auxiliary
+    may-contain
+        smSecretRolloverEnabled6,
+        smSecretGenTime6,
+        smSecretUsedTime6,
+        smSecretPreviousSecret6
+};
+
+schema set object-class smObjectClass:48 = {
+    name = smSharedSecretPolicy6
+    ldap-names = smSharedSecretPolicy6
+    subclass-of top
+    must-contain
+        objectclass,
+        smSharedSecretPolicyOID6,
+        smRolloverPolicyEnabled6,
+        smRolloverChangePeriod6,
+        smRolloverChangeFrequency6
+};
+
+# Session Server Object Class Declarations
+
+schema set object-class smObjectClass:50 = {
+        name = smSession
+        subclass-of top
+        kind = structural
+        must-contain
+          objectClass,
+          smSessionId
+        may-contain
+          smMaxIdleTime,
+          smLastAccessTime,
+          smIdleExpirationTime,
+          smExpirationTime,
+          smSessionStatus,
+          smSessionVariablesMode,
+          smSessionVariableData,
+          smsessionblob
+};
+
+schema set object-class smObjectClass:51 = {
+        name = smSessionVariable
+        subclass-of top
+        kind = structural
+        must-contain
+          objectClass,
+          commonName,
+          smVariableName,
+          smVariableValue,
+          smFullVariableName
+}; 
+
+schema set object-class smObjectClass:52 = {
+        name = smExpiryVariable
+        subclass-of top
+        kind = structural
+        must-contain
+          objectClass,
+          commonName,
+          smVarType,
+          smExpirationTime,
+          smVariableName
+        may-contain
+          smSearchData,
+          smVariableValue
+};
+
+schema set object-class smObjectClass:53 = {
+        name = smMaintenance
+        subclass-of top
+        kind = structural
+        must-contain
+          objectClass,
+          commonName,
+          smVersion
+        may-contain
+          smLastmClose
+};
+
+schema set object-class smObjectClass:54 = {
+        name = smTimedLock
+        subclass-of top
+        kind = structural
+        must-contain
+          objectClass,
+          smTimeValue
+        may-contain
+          smServerId
+};
+
+schema set object-class smObjectClass:55 = {
+        name = smTimeSync
+        subclass-of top
+        kind = structural
+        must-contain
+          objectClass,
+          commonName
+        may-contain
+          smServerId
+};
+
+#--------------------------------------------------
+# Name Bindings Declarations
+#--------------------------------------------------
+
+schema set name-binding smNameBinding:1 = {
+    name = svrCmd-ou
+    smservercommand4 allowable-parent organizationalUnit
+    named-by smServerCommandOID4
+};
+
+#schema set name-binding smNameBinding:2 = {
+#    name = passwdPolicy-ou
+#    smpasswordpolicy4 allowable-parent organizationalUnit
+#    named-by smPasswordPolicyOID4
+#};
+
+schema set name-binding smNameBinding:3 = {
+    name = ODBCQuery-ou
+    smodbcquery4 allowable-parent organizationalUnit
+    named-by smODBCQueryoid4
+};
+
+schema set name-binding smNameBinding:4 = {
+    name = selfReg-ou
+    smselfreg4 allowable-parent organizationalUnit
+    named-by smSelfRegoid4
+};
+
+schema set name-binding smNameBinding:5 = {
+    name = smadmin-ou
+    smadmin4 allowable-parent organizationalUnit
+    named-by smAdminOID4
+};
+
+#schema set name-binding smNameBinding:6 = {
+#   name = smUserDir-ou
+#   smuserdirectory4 allowable-parent organizationalUnit
+#   named-by smUserDirectoryOID4
+#};
+
+#schema set name-binding smNameBinding:7 = {
+#    name = smAgent-ou
+#    smagent4 allowable-parent organizationalUnit
+#    named-by smAgentOID4
+#};
+
+schema set name-binding smNameBinding:8 = {
+    name = smscheme-ou
+    smscheme4 allowable-parent organizationalUnit
+    named-by smSchemeOID4
+};
+
+schema set name-binding smNameBinding:9 = {
+    name = Agenttype-ou
+    smagenttype4 allowable-parent organizationalUnit
+    named-by smAgentTypeOID4
+};
+
+schema set name-binding smNameBinding:10 = {
+    name = agenttypeAttr-agentType
+    smagenttypeattr4 allowable-parent smagenttype4
+    named-by smAgentTypeAttrOID4
+};
+
+schema set name-binding smNameBinding:11 = {
+    name = agentKey-ou
+    smagentkey4 allowable-parent organizationalUnit
+    named-by smAgentKeyOID4
+};
+
+schema set name-binding smNameBinding:12 = {
+    name = keyMgmt-ou
+    smkeymanagement4 allowable-parent organizationalUnit
+    named-by smKeyManagementOID4
+};
+
+#schema set name-binding smNameBinding:13 = {
+#    name = rootConfig-ou
+#    smrootconfig4 allowable-parent organizationalUnit
+#    named-by smRootConfigOID4
+#};
+
+#schema set name-binding smNameBinding:14 = {
+#    name = smDomain-ou
+#    smdomain4 allowable-parent organizationalUnit
+#    named-by smDomainOID4
+#};
+
+#schema set name-binding smNameBinding:15 = {
+#    name = smpolicy-smDomain
+#    smpolicy4 allowable-parent smdomain4
+#    named-by smPolicyOID4
+#};
+
+#schema set name-binding smNameBinding:16 = {
+#    name = userPolicy-smpolicy
+#    smuserpolicy4 allowable-parent smpolicy4
+#    named-by smUserPolicyOID4
+#};
+
+#schema set name-binding smNameBinding:17 = {
+#    name = policyLink-smpolicy
+#    smpolicylink4 allowable-parent smpolicy4
+#    named-by smPolicyLinkOID4
+#};
+
+#schema set name-binding smNameBinding:18 = {
+#    name = smresponse-smdomain
+#    smresponse4 allowable-parent smdomain4
+#    named-by smResponseOID4
+#};
+
+#schema set name-binding smNameBinding:19 = {
+#    name = responseAttr-smresponse
+#    smresponseattr4 allowable-parent smresponse4
+#    named-by smResponseAttrOID4
+#};
+
+#schema set name-binding smNameBinding:20 = {
+#    name = smRule-smdomain
+#    smrule4 allowable-parent smdomain4
+#    named-by smRuleOID4
+#};
+
+#schema set name-binding smNameBinding:21 = {
+#    name = smRealm-smdomain
+#    smrealm4 allowable-parent smdomain4
+#    named-by smRealmOID4
+#};
+
+#schema set name-binding smNameBinding:22 = {
+#    name = responseGp-smdomain
+#    smresponsegroup4 allowable-parent smdomain4
+#    named-by smResponseGroupOID4
+#};
+
+#schema set name-binding smNameBinding:23 = {
+#    name = ruleGp-smdomain
+#    smrulegroup4 allowable-parent smdomain4
+#    named-by smRuleGroupOID4
+#};
+
+schema set name-binding smNameBinding:24 = {
+        name = agent-ou
+        smagentgroup4 allowable-parent organizationalUnit
+        named-by smAgentGroupOID4
+};
+
+schema set name-binding smNameBinding:25 = {
+        name = certmap-ou
+        smcertmap4 allowable-parent organizationalUnit
+        named-by smcertmapOID4
+};
+
+schema set name-binding smNameBinding:26 = {
+        name = authazmap-ou
+        smauthazmap4 allowable-parent organizationalUnit
+        named-by smAuthAzMapOID4
+};
+
+schema set name-binding smNameBinding:27 = {
+    name = agentCmd-ou
+    smagentcommand4 allowable-parent organizationalUnit
+    named-by smAgentCommandOID4
+};
+
+schema set name-binding smNameBinding:28 = {
+    name = smAgent5-ou
+    smagent5 allowable-parent organizationalUnit
+    named-by smAgentOID4
+};
+
+schema set name-binding smNameBinding:29 = {
+    name = smUserDir5-ou
+    smuserdirectory5 allowable-parent organizationalUnit
+    named-by smUserDirectoryOID4
+};
+
+schema set name-binding smNameBinding:30 = {
+    name = smDomain5-ou
+    smdomain5 allowable-parent organizationalUnit
+    named-by smDomainOID4
+};
+
+schema set name-binding smNameBinding:31 = {
+    name = smpolicy-smDomain5
+    smpolicy5 allowable-parent smdomain5
+    named-by smPolicyOID4
+};
+
+schema set name-binding smNameBinding:32 = {
+    name = responseAttr-smresponse5
+    smresponseattr5 allowable-parent smresponse4
+    named-by smResponseAttrOID4
+};
+
+schema set name-binding smNameBinding:33 = {
+    name = smRule-smdomain5
+    smrule5 allowable-parent smdomain5
+    named-by smRuleOID4
+};
+
+schema set name-binding smNameBinding:34 = {
+    name = passwdPolicy5-ou
+    smpasswordpolicy5 allowable-parent organizationalUnit
+    named-by smPasswordPolicyOID4
+};
+
+schema set name-binding smNameBinding:35 = {
+    name = rootConfig5-ou
+    smrootconfig5 allowable-parent organizationalUnit
+    named-by smRootConfigOID4
+};
+
+schema set name-binding smNameBinding:36 = {
+    name = smvariable5-ou
+    smvariable5 allowable-parent  smdomain5
+    named-by smvariableoid5
+};
+
+schema set name-binding smNameBinding:37 = {
+    name = smactiveexpr5-ou
+    smactiveexpr5 allowable-parent organizationalUnit
+    named-by smactiveexproid5
+    
+};
+
+schema set name-binding smNameBinding:38 = {
+    name = smvariabletype5-ou
+    smvariabletype5 allowable-parent organizationalUnit
+    named-by smvariabletypeoid5
+
+};
+
+schema set name-binding smNameBinding:39 = {
+    name = smpropertycollection5-ou
+    smpropertycollection5 allowable-parent organizationalUnit
+    named-by smPropertyCollectionOID5
+
+};
+
+schema set name-binding smNameBinding:40 = {
+    name = smproperty5-ou
+    smproperty5 allowable-parent organizationalUnit
+    named-by smPropertyOID5
+
+};
+
+schema set name-binding smNameBinding:41 = {
+    name = smtaggedstring5-ou
+    smtaggedstring5 allowable-parent organizationalUnit
+    named-by smTaggedStringOID5
+
+};
+
+schema set name-binding smNameBinding:42 = {
+    name = policyLink-smpolicy5
+    smpolicylink4 allowable-parent smpolicy5
+    named-by smPolicyLinkOID4
+};
+
+schema set name-binding smNameBinding:43 = {
+    name = userPolicy-smpolicy5
+    smuserpolicy4 allowable-parent smpolicy5
+    named-by smUserPolicyOID4
+};
+
+schema set name-binding smNameBinding:44 = {
+    name = smRealm-smdomain5
+    smrealm5 allowable-parent smdomain5
+    named-by smRealmOID4
+};
+
+schema set name-binding smNameBinding:45 = {
+    name = responseGp-smdomain5
+    smresponsegroup4 allowable-parent smdomain5
+    named-by smResponseGroupOID4
+};
+
+schema set name-binding smNameBinding:46 = {
+    name = ruleGp-smdomain5
+    smrulegroup4 allowable-parent smdomain5
+    named-by smRuleGroupOID4
+};
+
+schema set name-binding smNameBinding:47 = {
+    name = smresponse-smdomain5
+    smresponse4 allowable-parent smdomain5
+    named-by smResponseOID4
+};
+
+schema set name-binding smNameBinding:48 = {
+    name = smactiveexpr5-smdomain5
+    smactiveexpr5 allowable-parent smdomain5
+    named-by smactiveexproid5
+
+};
+
+schema set name-binding smNameBinding:49 = {
+    name = smpropertysection5-smpropcol5
+    smpropertysection5 allowable-parent smpropertycollection5
+    named-by smPropertySectionOID5
+
+};
+
+schema set name-binding smNameBinding:50 = {
+    name = smtrustedhost5-ou
+        smtrustedhost5 allowable-parent organizationalUnit
+    named-by smTrustedHostOID5
+
+};
+
+schema set name-binding smNameBinding:51 = {
+    name = smproperty5-smpropsect5
+    smproperty5 allowable-parent smpropertysection5
+    named-by smPropertyOID5
+
+};
+
+schema set name-binding smNameBinding:52 = {
+    name = smsharedsecretpolicy6-ou
+        smsharedsecretpolicy6 allowable-parent organizationalUnit
+    named-by smSharedSecretPolicyOID6
+
+};
+
+schema set name-binding smNameBinding:53 = {
+    name = smTaggedString5-smPasswordPolicy5
+    smTaggedString5 allowable-parent smPasswordPolicy5
+    named-by smTaggedStringOID5
+};
+
+# Session Server Name bindings Declarations
+
+schema set name-binding smNameBinding:60 = {
+          name = smSession-ou
+          smSession allowable-parent organizationalUnit
+          named-by smSessionId
+};
+
+schema set name-binding smNameBinding:61 = {
+          name = smSession-o
+          smSession allowable-parent organization
+          named-by smSessionId
+};
+
+schema set name-binding smNameBinding:62 = {
+          name = smSessionVariable-smSession
+          smSessionVariable allowable-parent smSession
+          named-by commonName
+};
+
+schema set name-binding smNameBinding:63 = {
+          name = smExpiryVariable-ExpVarTypeOU
+          smExpiryVariable allowable-parent organizationalUnit
+          named-by commonName
+};
+
+schema set name-binding smNameBinding:64 = {
+          name = smMaintenance-ou
+          smMaintenance allowable-parent organizationalUnit
+          named-by commonName
+};
+
+schema set name-binding smNameBinding:65 = {
+          name = smMaintenance-o
+          smMaintenance allowable-parent organization
+          named-by commonName
+};
+
+schema set name-binding smNameBinding:66 = {
+          name = smTimedLock-ou
+          smTimedLock allowable-parent organizationalUnit
+          named-by smTimeValue
+};
+
+schema set name-binding smNameBinding:67 = {
+          name = smTimedLock-o
+          smTimedLock allowable-parent organization
+          named-by smTimeValue
+};
+
+schema set name-binding smNameBinding:68 = {
+          name = smTimeSync-ou
+          smTimeSync allowable-parent organizationalUnit
+          named-by commonName
+};
+
+schema set name-binding smNameBinding:69 = {
+          name = smTimeSync-o
+          smTimeSync allowable-parent organization
+          named-by commonName
+};

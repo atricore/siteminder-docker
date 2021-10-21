@@ -1,0 +1,118 @@
+﻿<!-- SiteMinder Encoding=UTF-8; -->
+@username=%USER%
+@smretries=0
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=$$SMENC$$">
+  <title>SiteMinder Password Services</title>
+
+<!-- Cross-frame scripting prevention: This code will prevent this page from being encapsulated within HTML frames. Remove, or comment out, this code if the functionality that is contained in this SiteMinder page is to be included within HTML frames. -->
+<STYLE> 
+   html {
+      display : none ;
+      visibility : hidden; 
+   } </STYLE>
+<SCRIPT>
+   if( self == top ) {
+       document.documentElement.style.display = 'block' ; 
+       document.documentElement.style.visibility = 'visible' ; 
+   } else {
+       top.location = self.location ; 
+   }
+</SCRIPT>
+
+
+
+<SCRIPT LANGUAGE="JavaScript">
+function resetCredFields()
+{
+  document.Login.PASSWORD.value = "";
+}
+
+function submitForm()
+{
+     document.Login.submit();
+}
+
+</SCRIPT>
+
+</head>
+
+<body BGCOLOR="#ffffff" TEXT="#000000" onLoad = "resetCredFields();">
+
+<!-- Customer Brand -->
+<IMG alt=Logo src="/siteminderagent/dmspages/CATechnologies_logo.png">
+
+<form NAME="Login" METHOD="POST">
+<INPUT TYPE=HIDDEN NAME="SMENC" VALUE="$$SMENC$$">
+<INPUT type=HIDDEN name="SMLOCALE" value="US-EN">
+<center>
+
+<!-- outer table with border -->
+<table width="50%" height=200 border=1 cellpadding=0 cellspacing=0 >
+  <tr> 
+    <td>
+	  <!-- Login table -->
+      <table WIDTH="100%" HEIGHT=200 BGCOLOR="#FFEFD5" border=0 cellpadding=0 cellspacing=0 >
+
+	<tr>
+	  <td ALIGN="CENTER" VALIGN="CENTER" HEIGHT=40 COLSPAN=4 NOWRAP BGCOLOR="#FFDAB9">
+		<font size="+1" face="Arial,Helvetica">
+		<b>Please Login</b></font>
+	      </td>
+	</tr>
+
+	<tr> <td colspan=4 height=10> <font size=1> &nbsp; </font> </td> </tr>
+
+	<tr>
+	  <td WIDTH=20 >&nbsp;</td>
+	  <td ALIGN="LEFT" > 
+		    <b><font size=-1 face="arial,helvetica" > Username: </font></b>
+		  </td>
+	  <td ALIGN="LEFT" >
+			&nbsp; <input type="text" name="USER" size="30" style="margin-left: 1px">
+		  </td>
+	  <td WIDTH=20 >&nbsp;</td>
+	</tr>
+
+	<tr> <td colspan=4 height=10> <font size=1> &nbsp; </font> </td> </tr>
+
+	<tr>
+	  <td WIDTH=20 >&nbsp;</td>
+	  <td >
+		    <b><font size=-1 face="arial,helvetica" > Password: </font></b>
+	      </td>
+	  <td ALIGN="left" >
+			&nbsp; <input type="password" name="PASSWORD" size="30" style="margin-left: 1px">
+	  </td>
+	  <td WIDTH=20 >&nbsp;</td>
+	</tr>
+
+	<tr> <td colspan=4 height=10> <font size=1> &nbsp; </font> </td> </tr>
+
+	<tr>
+	  <td colspan=4 NOWRAP WIDTH="50%" HEIGHT="25" align="CENTER">
+	      <input type=hidden name=target value="http://extapp:9090/private/">
+	      <input type=hidden name=smquerydata value="$$smquerydata$$">
+	      <input type=hidden name=smauthreason value="$$smauthreason$$">
+	      <input type=hidden name=smagentname value="$$smagentname$$">
+	      <input type=hidden name=postpreservationdata value="$$postpreservationdata$$">
+	      <input type="button" value="Login" onClick="submitForm();">
+	  </td>
+	</tr>
+
+	<tr> <td colspan=4 height=5> <font size=1> &nbsp; </font> </td> </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</form></center>
+
+<script language="javascript">
+  document.forms["Login"].elements["USER"].focus();
+</script>
+
+</body>
+</html>

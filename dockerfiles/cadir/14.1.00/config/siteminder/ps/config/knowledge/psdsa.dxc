@@ -1,0 +1,17 @@
+# CA DXserver/config/knowledge/
+#
+# Knowledge configuration file written by dxnewdsa
+#
+# Refer to the Admin Guide for the format of the set dsa command.
+
+set dsa "psdsa" =
+{
+    prefix        = <c US><o psdsa>
+    dsa-name      = <c US><o psdsa><cn "psdsa">
+    dsa-password  = "secret"
+    address       = tcp "dx" port 7777
+    disp-psap     = DISP
+    snmp-port     = 7777
+    console-port  = 7778
+    auth-levels   = anonymous, clear-password
+};

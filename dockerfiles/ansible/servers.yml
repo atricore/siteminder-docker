@@ -1,0 +1,11 @@
+all:
+  hosts:
+    dx:
+      ansible_host: "dx"
+      ansible_user: "dsa"
+    ps:
+      ansible_host: "ps"
+      ansible_user: "smuser"
+    ag:
+      ansible_host: "ag"
+      ansible_user: "smuser"

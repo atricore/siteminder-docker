@@ -1,0 +1,12 @@
+version: 1
+
+dn: cn=admin,ou=contoso,o=psdsa,c=US
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: admin
+sn: admin
+userPassword:: e1NTSEE1MTJ9T25TbDZrMjlSSDErMnRhdTYrWGRUVHNCYkNHOGwxY1Z5aWsrW
+ mlYblZTUDROektUT0tRaklqcG9DS3ZqZkZqWWd4b1QyT1hya2dyc1BjcVphTDJiNi85UUFzOD0=
+

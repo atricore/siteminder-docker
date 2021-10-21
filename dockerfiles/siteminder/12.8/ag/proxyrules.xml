@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<?cocoon-process type="xslt"?>
+<!DOCTYPE nete:proxyrules SYSTEM "file:////opt/CA/secure-proxy/default/proxy-engine/conf/dtd/proxyrules.dtd">
+<!-- Proxy Rules-->
+<nete:proxyrules xmlns:nete="http://www.ca.com/" debug="yes"><nete:cond type="host" criteria="equals"><nete:case value="extapp:9090"><nete:forward>http://app$1</nete:forward>
+</nete:case>
+<nete:default><nete:forward>http://cnn.com$1</nete:forward>
+</nete:default>
+</nete:cond>
+</nete:proxyrules>

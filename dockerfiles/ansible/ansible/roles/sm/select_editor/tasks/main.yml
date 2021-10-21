@@ -1,0 +1,11 @@
+---
+- name: Select default text editor
+  lineinfile:
+    dest: "{{ item }}/.selected_editor"
+    line: "SELECTED_EDITOR='/usr/bin/{{ select_editor.editor }}'"
+    regexp: "^SELECTED_EDITOR"
+    insertafter: EOF
+    state: present
+    create: yes
+  with_items:
+    - "{{ select_editor.user_homes }}"
