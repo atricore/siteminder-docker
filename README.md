@@ -39,3 +39,9 @@ Open the 'https://localhost:8443/iam/siteminder/adminui' page and sign in with s
 
 ## Questions / Issues
 If you got any questions or problems using the image, please visit our [Github Repository](https://github.com/atricore/siteminder-docker) and write an issue.
+
+## Sponsors
+
+This project is sponsored Atricore - No Code Identity and Access Management :
+
+<a href="https://atricore.com"><img src="https://uploads-ssl.webflow.com/611d67401a94b9fb36e5b81f/611d6c7ea44ebe1b8ecd9d0c_atricore-logo.svg" width="320" /></a>

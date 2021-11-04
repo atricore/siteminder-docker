@@ -8,7 +8,7 @@
             <nete:forward>http://app$1</nete:forward>
         </nete:case>
         <nete:default>
-            <nete:forward>http://cnn.com$1</nete:forward>
+            <nete:forward>https://atricore.com$1</nete:forward>
         </nete:default>
     </nete:cond>
 </nete:proxyrules>
