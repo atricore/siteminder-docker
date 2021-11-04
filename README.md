@@ -14,14 +14,16 @@ In every 'install' folder there is a README.txt file specifying which CA Sitemin
 ## Build
 
 From the root of the project run the following command :
-
+```console
 $ docker-compose up --build
+```
 
 ## Host entry
 
 Add an entry in your host file for binding 'extapp' to the local interface :
-
+``` 
 127.0.0.1 extapp
+```
 
 ## Access protected resource
 
@@ -35,7 +37,5 @@ c) The protected resource comprising a dump of the Http request will be displaye
 
 Open the 'https://localhost:8443/iam/siteminder/adminui' page and sign in with siteminder/siteminder (leave the policy server field blank).
 
-## Support
-
-For support, bug reporting and feedback about the provided Dockerfiles and Ansible configuration, please
-open a ticket by sending an email to support@atricore.com .
+## Questions / Issues
+If you got any questions or problems using the image, please visit our [Github Repository](https://github.com/atricore/siteminder-docker) and write an issue.
