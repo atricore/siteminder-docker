@@ -3,7 +3,7 @@ services:
   dx:
     build:
       context: ./dockerfiles/cadir/14.1.00
-    image: atricore/dx
+    image: atricore/sm-dx:14.1.00
     hostname: dx
     networks:
       - sm
@@ -15,7 +15,7 @@ services:
   ps:
     build:
       context: ./dockerfiles/siteminder/12.8/ps
-    image: atricore/ps
+    image: atricore/sm-ps:12.8
     hostname: ps
     networks:
       - sm
@@ -29,7 +29,7 @@ services:
   ag:
     build:
       context: ./dockerfiles/siteminder/12.8/ag
-    image: atricore/ag
+    image: atricore/sm-ag:12.8
     hostname: ag
     ports:
       - "3022:22"
@@ -46,7 +46,7 @@ services:
   app:
     build:
       context: ./dockerfiles/apps/resty
-    image: atricore/app
+    image: atricore/sm-app
     hostname: app
     networks:
       - sm
@@ -59,7 +59,7 @@ services:
   ansible:
     build:
       context: ./dockerfiles/ansible
-    image: atricore/ansible
+    image: atricore/sm-ansible:12.8
     hostname: ansible
     networks:
       - sm
