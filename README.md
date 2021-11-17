@@ -33,9 +33,18 @@ b) Sign-in using 'admin' as the username and 'secret' as the password.
 
 c) The protected resource comprising a dump of the Http request will be displayed 
 
-## Accessing the administrative UI
+## Accessing the Policy Server Administrative UI
 
 Open the 'https://localhost:8443/iam/siteminder/adminui' page and sign in with siteminder/siteminder (leave the policy server field blank).
+
+## Accessing the Access Gateway (SPS) Administration console
+
+Add an entry in your host file for binding 'ag' to the local interface :
+``` 
+127.0.0.1 ag
+```
+
+Then, open 'http://ag:9191/proxyui' and sign in using 'admin' as the username, and 'secret' as the password.
 
 ## Questions / Issues
 If you got any questions or problems using the image, please visit our [Github Repository](https://github.com/atricore/siteminder-docker) and write an issue.
