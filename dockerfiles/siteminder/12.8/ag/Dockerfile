@@ -34,7 +34,7 @@ ENV AG_ZIP=ag-12.8-sp05-linux-x86-64.zip \
 #
 # Creation of User, Directories and Installation of OS packages
 # ----------------------------------------------------------------
-RUN yum install -y which unzip rng-tools  java-1.8.0-openjdk-devel-1:1.8.0.292.b10-1.el8_4.x86_64 ksh openldap-clients openssh-server xauth
+RUN yum install -y which unzip rng-tools  java-1.8.0-openjdk-devel ksh openldap-clients openssh-server xauth
 RUN groupadd smuser && \
     useradd smuser -g smuser
 RUN mkdir -p ${BASE_DIR} && \

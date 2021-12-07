@@ -12,7 +12,7 @@ ENV SCRIPT_DIR=${INSTALL_TEMP}/dockertools
 
 # Installation of OS packages
 # ----------------------------------------------------------------
-RUN yum install -y which unzip rng-tools java-1.8.0-openjdk-1.8.0.292.b10-1.el8_4.x86_64 ksh python2 openldap-clients openssh-server && \
+RUN yum install -y which unzip rng-tools java-1.8.0-openjdk ksh python2 openldap-clients openssh-server && \
     ln -s /usr/bin/python2 /usr/local/bin/python
 
 RUN groupadd etrdir && \
