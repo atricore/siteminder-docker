@@ -1,0 +1,2 @@
+FROM centos:8
+

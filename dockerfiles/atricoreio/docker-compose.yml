@@ -1,0 +1,31 @@
+version: "3"
+services:
+  etcd:
+    image: bitnami/etcd
+    hostname: etcd
+    networks:
+      - sm
+    ports:
+      - 2379:2379
+      - 2380:2380
+    environment:
+      - ALLOW_NONE_AUTHENTICATION=yes
+      - ETCD_ADVERTISE_CLIENT_URLS=http://etcd:2379
+
+  dex:
+    build:
+      context: ./dex
+    image: atricore/dex
+    hostname: dex
+    networks:
+      - sm
+    ports:
+      - 5556:5556
+    depends_on:
+      - etcd
+    entrypoint: dex serve /dex/config/config-sm-pxy.yaml
+    
+networks:
+  sm:
+    external: true
+    name: sm-net
