@@ -50,7 +50,7 @@ COPY --chown=dsa:etrdir config/siteminder/ps/config/schema/psdsa.dxg /opt/CA/Dir
 COPY --chown=dsa:etrdir config/siteminder/ps/config/servers/psdsa.dxi /opt/CA/Directory/dxserver/config/servers
 COPY --chown=dsa:etrdir config/siteminder/ps/config/limits/psdsa.dxc /opt/CA/Directory/dxserver/config/limits
 COPY --chown=dsa:etrdir config/siteminder/ps/config/knowledge/psdsa.dxc /opt/CA/Directory/dxserver/config/knowledge
-COPY --chown=dsa:etrdir config/siteminder/ps/data/psdsa.db /opt/CA/Directory/dxserver/data
+#COPY --chown=dsa:etrdir config/siteminder/ps/data/psdsa.db /opt/CA/Directory/dxserver/data
 
 # Setup SSH access
 # ----------------

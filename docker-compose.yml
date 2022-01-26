@@ -3,7 +3,7 @@ services:
   dx:
     build:
       context: ./dockerfiles/cadir/14.1.00
-    image: atricore/sm-dx:14.1.00
+    image: atricore/sm-dx:14.1.00-d
     hostname: dx
     networks:
       - sm
@@ -29,7 +29,7 @@ services:
   ag:
     build:
       context: ./dockerfiles/siteminder/12.8/ag
-    image: atricore/sm-ag:12.8
+    image: atricore/sm-ag:12.8-d
     hostname: ag
     ports:
       - "3022:22"

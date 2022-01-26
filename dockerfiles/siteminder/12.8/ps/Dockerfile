@@ -16,7 +16,7 @@ ENV SCRIPT_DIR=${INSTALL_TEMP}/dockertools
 #
 # Creation of User, Directories and Installation of OS packages
 # ----------------------------------------------------------------
-RUN yum install -y which unzip rng-tools java-1.8.0-openjdk-1.8.0.292.b10-1.el8_4.x86_64 ksh openldap-clients openssh-server openssh-clients rsync tmux xauth libnsl
+RUN yum install -y which unzip rng-tools java-1.8.0-openjdk-devel ksh openldap-clients openssh-server openssh-clients rsync tmux xauth libnsl
 RUN groupadd smuser && \
     useradd smuser -g smuser
 RUN mkdir -p ${BASE_DIR} && \
@@ -70,7 +70,6 @@ RUN unzip ${INSTALL_TEMP}/${PS_ZIP} -d ${INSTALL_TEMP} && \
 
 RUN cp ${INSTALL_TEMP}/smreg /opt/CA/siteminder/bin && \
     cp ${INSTALL_TEMP}/sm.registry /opt/CA/siteminder/registry/sm.registry
-
 RUN echo ". /opt/CA/siteminder/ca_ps_env.ksh" >> /home/smuser/.bash_profile
 
 # Install Administrative Interface Prerequisites

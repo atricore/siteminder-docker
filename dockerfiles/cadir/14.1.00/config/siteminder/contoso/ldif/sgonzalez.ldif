@@ -1,13 +1,13 @@
 version: 1
 
-dn: cn=ChQwMHU5bjdqMGpNcHdVb1J4aTY5NhIEb2t0YQ,ou=contoso,o=psdsa,c=US
+dn: cn=sgonzalez@atricore.com,ou=contoso,o=psdsa,c=US
 objectClass: inetOrgPerson
 objectClass: organizationalPerson
 objectClass: person
 objectClass: top
-cn: ChQwMHU5bjdqMGpNcHdVb1J4aTY5NhIEb2t0YQ
+cn: sgonzalez@atricore.com
 sn: sgonzalez
 mail: sgonzalez@atricore.com
-userPassword:: e1NTSEE1MTJ9T25TbDZrMjlSSDErMnRhdTYrWGRUVHNCYkNHOGwxY1Z5aWsrW
- mlYblZTUDROektUT0tRaklqcG9DS3ZqZkZqWWd4b1QyT1hya2dyc1BjcVphTDJiNi85UUFzOD0=
+userPassword:: e1NIQTUxMn12U3NhcjM3MDhKdnA5U3ppMk5XWlowMkJxcDFxUkNGcGJjVFpQZ
+ EJobldnczVXdE5aS252Q1hkaHp0bWVEMmNtVzE5MkNGNWJEdWZLUnBheXJXL2lzZz09
 
