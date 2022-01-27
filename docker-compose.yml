@@ -59,7 +59,7 @@ services:
   ansible:
     build:
       context: ./dockerfiles/ansible
-    image: atricore/sm-ansible:12.8
+    image: atricore/sm-ansible:12.8-d
     hostname: ansible
     networks:
       - sm

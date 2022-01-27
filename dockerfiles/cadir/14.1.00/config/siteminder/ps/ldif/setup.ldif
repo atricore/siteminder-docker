@@ -12,6 +12,7 @@ objectClass: person
 objectClass: top
 cn: admin
 sn: admin
+mail: admin@example.com
 userPassword:: e1NIQTUxMn12U3NhcjM3MDhKdnA5U3ppMk5XWlowMkJxcDFxUkNGcGJjVFpQZ
  EJobldnczVXdE5aS252Q1hkaHp0bWVEMmNtVzE5MkNGNWJEdWZLUnBheXJXL2lzZz09
 

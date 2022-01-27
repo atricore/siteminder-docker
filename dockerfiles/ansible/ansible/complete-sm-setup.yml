@@ -4,11 +4,6 @@
     tasks:
       - name: Execute CA Directory post installation script
         shell: nohup /tmp/cadir_temp/dockertools/setup_psdsa.sh </dev/null >/dev/null 2>&1 &
-  - name: Run Siteminder Policy Server
-    hosts: ps
-    tasks:
-      - name: Execute the PS start command
-        shell: nohup /opt/CA/siteminder/start-all </dev/null >/dev/null 2>&1 &
   - name: Configure Siteminder Policy Server
     hosts: ps
     tasks:
@@ -17,6 +12,11 @@
         command: "/tmp/sm_temp/dockertools/setup_ps.sh"
       - debug:
           var: out.stdout_lines
+  - name: Run Siteminder Policy Server
+    hosts: ps
+    tasks:
+      - name: Execute the PS start command
+        shell: nohup /opt/CA/siteminder/start-all </dev/null >/dev/null 2>&1 &
   - name: Setup Siteminder AG
     hosts: ag
     tasks:
