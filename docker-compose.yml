@@ -14,14 +14,18 @@ services:
     tty: true
   ps:
     build:
-      context: ./dockerfiles/siteminder/12.8/ps
-    image: atricore/sm-ps:12.8
+      context: ./dockerfiles/siteminder/12.8/ps-d
+    image: atricore/sm-ps:12.8-d
     hostname: ps
     networks:
       - sm
     ports:
       - "2022:22"
       - "8443:8443"
+      - "44441:44441"
+      - "44442:44442"
+      - "44443:44443"
+      - "44444:44444"
     depends_on:
       - dx
     stdin_open: true

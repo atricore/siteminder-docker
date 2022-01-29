@@ -9,7 +9,7 @@
     tasks:
       - name: Execute PS post-install  command
         register: out
-        command: "/tmp/sm_temp/dockertools/setup_ps.sh"
+        shell: sleep 40 && /tmp/sm_temp/dockertools/setup_ps.sh
       - debug:
           var: out.stdout_lines
   - name: Run Siteminder Policy Server
@@ -43,7 +43,7 @@
     tasks:
       - name: Kill SPS UI
         register: out
-        shell: sleep 40 && /opt/CA/secure-proxy/default/proxy-engine/sps-ctl stop
+        shell: sleep 80 && /opt/CA/secure-proxy/default/proxy-engine/sps-ctl stop
         ignore_errors: True
       - debug:
           var: out.stdout_lines
