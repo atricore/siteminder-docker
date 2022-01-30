@@ -46,7 +46,7 @@ $protLevel=5;
 #$schemeLib="smjavaapi";
 $schemeLib="smauthhtml";
 #$schemeParam="/siteminderagent/forms/login.fcc;ACS=0;REL=1";
-$schemeParam="http://ag.34.133.255.103.nip.io:9090/forms/k8slogin.fcc;ACS=0;REL=0";
+$schemeParam="http://extapp.34.133.255.103.nip.io:9090/forms/k8slogin.fcc;ACS=0;REL=0";
 $schemeSecret="ThisIsMySecretNotYours";
 $isTemplate=0;
 $isUsedByAdmin=0;

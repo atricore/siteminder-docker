@@ -4,10 +4,16 @@
 <!-- Proxy Rules-->
 <nete:proxyrules xmlns:nete="http://www.ca.com/" debug="yes">
     <nete:cond type="host" criteria="equals">
-        <nete:case value="ag.34.133.255.103.nip.io:9090">
+        <nete:case value="extapp.34.133.255.103.nip.io:9090">
             <nete:forward>http://app$1</nete:forward>
         </nete:case>
-        <nete:case value="ag.34.133.255.103.nip.io:8080">
+        <nete:case value="extapp.34.133.255.103.nip.io:8080">
+            <nete:forward>http://app$1</nete:forward>
+        </nete:case>
+        <nete:case value="extapp:9090">
+            <nete:forward>http://app$1</nete:forward>
+        </nete:case>
+        <nete:case value="extapp:8080">
             <nete:forward>http://app$1</nete:forward>
         </nete:case>
         <nete:default>
