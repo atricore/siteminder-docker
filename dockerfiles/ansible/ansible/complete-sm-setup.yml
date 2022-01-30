@@ -9,7 +9,7 @@
     tasks:
       - name: Execute PS post-install  command
         register: out
-        shell: sleep 40 && /tmp/sm_temp/dockertools/setup_ps.sh
+        shell: sleep 80 && /tmp/sm_temp/dockertools/setup_ps.sh
       - debug:
           var: out.stdout_lines
   - name: Run Siteminder Policy Server
