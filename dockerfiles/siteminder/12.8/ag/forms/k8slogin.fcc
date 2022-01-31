@@ -94,7 +94,8 @@ function submitForm()
 
 	<tr>
 	  <td colspan=4 NOWRAP WIDTH="50%" HEIGHT="25" align="CENTER">
-	      <input type=hidden name=target value="http://extapp:9090/private/">
+	      <input type=hidden name=target value="http://extapp.34.133.255.103.nip.io
+:9090/private/">
 	      <input type=hidden name=smquerydata value="$$smquerydata$$">
 	      <input type=hidden name=smauthreason value="$$smauthreason$$">
 	      <input type=hidden name=smagentname value="$$smagentname$$">
